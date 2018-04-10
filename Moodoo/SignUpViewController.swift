@@ -59,7 +59,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func btnCancel(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

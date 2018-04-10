@@ -16,6 +16,9 @@
 		4CF97032206CA6CB000478AC /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97031206CA6CB000478AC /* AppUser.swift */; };
 		4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97035206CB23C000478AC /* LoginViewController.swift */; };
 		4CF97038206D8D70000478AC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97037206D8D70000478AC /* SignUpViewController.swift */; };
+		4CF9703A207D3A88000478AC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */; };
+		4CF9703C207D4201000478AC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9703B207D4201000478AC /* Settings.storyboard */; };
+		4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9703D207D447B000478AC /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		4CF97031206CA6CB000478AC /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		4CF97035206CB23C000478AC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CF97037206D8D70000478AC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		4CF9703B207D4201000478AC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		4CF9703D207D447B000478AC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 			children = (
 				4CF97016206C8841000478AC /* AppDelegate.swift */,
 				4CF9701A206C8841000478AC /* Main.storyboard */,
+				4CF9703B207D4201000478AC /* Settings.storyboard */,
+				4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */,
+				4CF9703D207D447B000478AC /* SettingsViewController.swift */,
 				4CF97037206D8D70000478AC /* SignUpViewController.swift */,
 				4CF9702F206C9862000478AC /* PersistenceService.swift */,
 				4CF97035206CB23C000478AC /* LoginViewController.swift */,
@@ -138,6 +147,7 @@
 				4CF97024206C8841000478AC /* LaunchScreen.storyboard in Resources */,
 				4CF97021206C8841000478AC /* Assets.xcassets in Resources */,
 				4CF9701C206C8841000478AC /* Main.storyboard in Resources */,
+				4CF9703C207D4201000478AC /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,11 +159,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF97038206D8D70000478AC /* SignUpViewController.swift in Sources */,
+				4CF9703A207D3A88000478AC /* ForgotPasswordViewController.swift in Sources */,
 				4CF97030206C9862000478AC /* PersistenceService.swift in Sources */,
 				4CF97032206CA6CB000478AC /* AppUser.swift in Sources */,
 				4CF9701F206C8841000478AC /* Moodoo.xcdatamodeld in Sources */,
 				4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */,
 				4CF97017206C8841000478AC /* AppDelegate.swift in Sources */,
+				4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
