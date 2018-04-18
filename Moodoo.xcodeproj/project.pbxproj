@@ -22,6 +22,7 @@
 		57F06D12CB3BACF5056B92BD /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */; };
 		926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */; };
 		92EF1DDD2086ECCA0096DF5A /* appJourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */; };
+		92EF1DE12086F3A70096DF5A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = appJourney.storyboard; sourceTree = "<group>"; };
+		92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Moodoo/Storyboards_Anthony/OnboardingViewController.swift; sourceTree = "<group>"; };
 		BA66B3C2452C557F944F7A07 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
 		EDA82EF606E4CFCC243E03F5 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		4CF9700A206C8840000478AC = {
 			isa = PBXGroup;
 			children = (
+				92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */,
 				4CF97015206C8841000478AC /* Moodoo */,
 				4CF97014206C8841000478AC /* Products */,
 				1107258022E3D2B28D99FB3B /* Pods */,
@@ -256,11 +259,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -281,6 +286,7 @@
 				4CF9701F206C8841000478AC /* Moodoo.xcdatamodeld in Sources */,
 				4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */,
 				4CF97017206C8841000478AC /* AppDelegate.swift in Sources */,
+				92EF1DE12086F3A70096DF5A /* OnboardingViewController.swift in Sources */,
 				4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
