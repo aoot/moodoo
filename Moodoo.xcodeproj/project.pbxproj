@@ -21,6 +21,7 @@
 		4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9703D207D447B000478AC /* SettingsViewController.swift */; };
 		57F06D12CB3BACF5056B92BD /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */; };
 		926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */; };
+		92EF1DDD2086ECCA0096DF5A /* appJourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4CF9703D207D447B000478AC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = appJourney.storyboard; sourceTree = "<group>"; };
 		BA66B3C2452C557F944F7A07 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
 		EDA82EF606E4CFCC243E03F5 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 		92EF1DD92086EBD80096DF5A /* Storyboards_Anthony */ = {
 			isa = PBXGroup;
 			children = (
+				92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */,
 			);
 			path = Storyboards_Anthony;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF97024206C8841000478AC /* LaunchScreen.storyboard in Resources */,
+				92EF1DDD2086ECCA0096DF5A /* appJourney.storyboard in Resources */,
 				4CF97021206C8841000478AC /* Assets.xcassets in Resources */,
 				926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */,
 				4CF9701C206C8841000478AC /* Main.storyboard in Resources */,
