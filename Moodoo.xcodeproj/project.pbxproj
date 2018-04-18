@@ -87,21 +87,46 @@
 			isa = PBXGroup;
 			children = (
 				4CF97016206C8841000478AC /* AppDelegate.swift */,
-				4CF9701A206C8841000478AC /* Main.storyboard */,
-				4CF9703B207D4201000478AC /* Settings.storyboard */,
 				4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */,
 				4CF9703D207D447B000478AC /* SettingsViewController.swift */,
 				4CF97037206D8D70000478AC /* SignUpViewController.swift */,
 				4CF9702F206C9862000478AC /* PersistenceService.swift */,
 				4CF97035206CB23C000478AC /* LoginViewController.swift */,
 				4CF97020206C8841000478AC /* Assets.xcassets */,
-				4CF97022206C8841000478AC /* LaunchScreen.storyboard */,
 				4CF97031206CA6CB000478AC /* AppUser.swift */,
 				4CF97025206C8841000478AC /* Info.plist */,
 				4CF9701D206C8841000478AC /* Moodoo.xcdatamodeld */,
 				926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */,
+				4CF97022206C8841000478AC /* LaunchScreen.storyboard */,
+				92EF1DDA2086EBFC0096DF5A /* Storyboards_Natascha */,
+				92EF1DDB2086EC0C0096DF5A /* Storyboards_Michael */,
+				92EF1DD92086EBD80096DF5A /* Storyboards_Anthony */,
 			);
 			path = Moodoo;
+			sourceTree = "<group>";
+		};
+		92EF1DD92086EBD80096DF5A /* Storyboards_Anthony */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards_Anthony;
+			sourceTree = "<group>";
+		};
+		92EF1DDA2086EBFC0096DF5A /* Storyboards_Natascha */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards_Natascha;
+			path = Storyboards_Anthony;
+			sourceTree = "<group>";
+		};
+		92EF1DDB2086EC0C0096DF5A /* Storyboards_Michael */ = {
+			isa = PBXGroup;
+			children = (
+				4CF9701A206C8841000478AC /* Main.storyboard */,
+				4CF9703B207D4201000478AC /* Settings.storyboard */,
+			);
+			path = Storyboards_Michael;
 			sourceTree = "<group>";
 		};
 		F57349C99F5D9EAC17E25987 /* Frameworks */ = {
