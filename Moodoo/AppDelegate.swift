@@ -14,11 +14,19 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tabBarController: TabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure() // Connecting Firebase to the app
+        
+        // Setup the tab bar controller
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        tabBarController = TabBarController()
+        window?.rootViewController = tabBarController
+        
         return true
     }
 
@@ -44,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         PersistenceService.shared.saveContext()
+        
+        // self.saveContext()
+        // what I used in my appDelegate - NB
     }
 
     
@@ -55,6 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.cs378.TestCoreDataSwift" in the application's documents Application Support directory.
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
+     used all the stuff below as well - NB - not sure if I can uncomment everything
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
