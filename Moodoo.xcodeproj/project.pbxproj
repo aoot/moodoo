@@ -19,10 +19,7 @@
 		4CF9703A207D3A88000478AC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */; };
 		4CF9703C207D4201000478AC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9703B207D4201000478AC /* Settings.storyboard */; };
 		4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9703D207D447B000478AC /* SettingsViewController.swift */; };
-		57F06D12CB3BACF5056B92BD /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */; };
 		926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */; };
-		92EF1DDD2086ECCA0096DF5A /* appJourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */; };
-		92EF1DE12086F3A70096DF5A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */; };
 		E52C882B208945E100D9858E /* CaptureMood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52C882A208945E100D9858E /* CaptureMood.storyboard */; };
 		E52C882D208946CA00D9858E /* CaptureMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C882C208946CA00D9858E /* CaptureMoodView.swift */; };
 		E52C882F2089472300D9858E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C882E2089472300D9858E /* TabBarController.swift */; };
@@ -44,16 +41,11 @@
 		4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4CF9703B207D4201000478AC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4CF9703D207D447B000478AC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = appJourney.storyboard; sourceTree = "<group>"; };
-		92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingViewController.swift; path = Moodoo/Storyboards_Anthony/OnboardingViewController.swift; sourceTree = "<group>"; };
-		BA66B3C2452C557F944F7A07 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
 		E52C882A208945E100D9858E /* CaptureMood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CaptureMood.storyboard; path = Moodoo/CaptureMood.storyboard; sourceTree = SOURCE_ROOT; };
 		E52C882C208946CA00D9858E /* CaptureMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptureMoodView.swift; path = Moodoo/CaptureMoodView.swift; sourceTree = SOURCE_ROOT; };
 		E52C882E2089472300D9858E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Moodoo/TabBarController.swift; sourceTree = SOURCE_ROOT; };
 		E52C88302089475D00D9858E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Moodoo/CalendarViewController.swift; sourceTree = SOURCE_ROOT; };
-		EDA82EF606E4CFCC243E03F5 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,30 +53,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57F06D12CB3BACF5056B92BD /* Pods_Moodoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1107258022E3D2B28D99FB3B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				BA66B3C2452C557F944F7A07 /* Pods-Moodoo.debug.xcconfig */,
-				EDA82EF606E4CFCC243E03F5 /* Pods-Moodoo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		4CF9700A206C8840000478AC = {
 			isa = PBXGroup;
 			children = (
-				92EF1DE02086F3A70096DF5A /* OnboardingViewController.swift */,
 				4CF97015206C8841000478AC /* Moodoo */,
 				4CF97014206C8841000478AC /* Products */,
-				1107258022E3D2B28D99FB3B /* Pods */,
-				F57349C99F5D9EAC17E25987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,7 +100,6 @@
 		92EF1DD92086EBD80096DF5A /* Storyboards_Anthony */ = {
 			isa = PBXGroup;
 			children = (
-				92EF1DDC2086ECCA0096DF5A /* appJourney.storyboard */,
 			);
 			path = Storyboards_Anthony;
 			sourceTree = "<group>";
@@ -147,14 +125,6 @@
 			path = Storyboards_Michael;
 			sourceTree = "<group>";
 		};
-		F57349C99F5D9EAC17E25987 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				81BF81EB2DEAE64032567450 /* Pods_Moodoo.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,12 +132,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF97028206C8841000478AC /* Build configuration list for PBXNativeTarget "Moodoo" */;
 			buildPhases = (
-				2E8BB3670BF50D3B6D450CAC /* [CP] Check Pods Manifest.lock */,
 				4CF9700F206C8841000478AC /* Sources */,
 				4CF97010206C8841000478AC /* Frameworks */,
 				4CF97011206C8841000478AC /* Resources */,
-				FC4BE7E995E2EE913767EEBE /* [CP] Embed Pods Frameworks */,
-				20267DC76811DA6FA00D7372 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,7 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF97024206C8841000478AC /* LaunchScreen.storyboard in Resources */,
-				92EF1DDD2086ECCA0096DF5A /* appJourney.storyboard in Resources */,
 				E52C882B208945E100D9858E /* CaptureMood.storyboard in Resources */,
 				4CF97021206C8841000478AC /* Assets.xcassets in Resources */,
 				926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */,
@@ -228,64 +194,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		20267DC76811DA6FA00D7372 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2E8BB3670BF50D3B6D450CAC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Moodoo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC4BE7E995E2EE913767EEBE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CF9700F206C8841000478AC /* Sources */ = {
@@ -302,7 +210,6 @@
 				4CF9701F206C8841000478AC /* Moodoo.xcdatamodeld in Sources */,
 				4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */,
 				4CF97017206C8841000478AC /* AppDelegate.swift in Sources */,
-				92EF1DE12086F3A70096DF5A /* OnboardingViewController.swift in Sources */,
 				4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +345,6 @@
 		};
 		4CF97029206C8841000478AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA66B3C2452C557F944F7A07 /* Pods-Moodoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,7 +360,6 @@
 		};
 		4CF9702A206C8841000478AC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EDA82EF606E4CFCC243E03F5 /* Pods-Moodoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
