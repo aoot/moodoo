@@ -11,7 +11,6 @@ import CoreData
 
 class CalendarViewController: UITableViewController {
     
-    var moods = [NSManagedObject]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +22,6 @@ class CalendarViewController: UITableViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.managedObjectContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Mood")
@@ -64,10 +62,10 @@ class CalendarViewController: UITableViewController {
         return moods.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mood", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "moodID", for: indexPath)
         let mood = moods[indexPath.row]
         
-        cell.textLabel!.text = "\(mood.value(forKey: "date") as! Date)"
+        cell.textLabel!.text = "\(mood.value(forKey: "date") as! String)"
         
         
         return cell

@@ -58,15 +58,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
-    // PENDING DELETION
-    
     // MARK: - Core Data stack
-    /*
+    
     lazy var applicationDocumentsDirectory: URL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "com.cs378.TestCoreDataSwift" in the application's documents Application Support directory.
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return urls[urls.count-1]
-     used all the stuff below as well - NB - not sure if I can uncomment everything
     }()
     
     lazy var managedObjectModel: NSManagedObjectModel = {
@@ -150,6 +147,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    */
+
 }
 
