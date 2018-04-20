@@ -45,13 +45,24 @@ class CaptureMoodView: UIViewController, UITextFieldDelegate{
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         var dateStr = dateFormatter.string(from: dateVar as Date)
-        let alert = UIAlertController(title: "Congrats!",
-                                      message: "You logged your mood \(moods.count + 1) time(s)!",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in
+        if moods.count == 0{
+            let alert = UIAlertController(title: "Congrats!",
+                                          message: "You logged your mood \(moods.count + 1) time!",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
         }
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
+        else{
+            let alert = UIAlertController(title: "Congrats!",
+                                          message: "You logged your mood \(moods.count + 1) times!",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in
+            }
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
         func saveMood(anxious:Int, angry:Int, happy:Int, excited:Int, sad: Int, sleepInt: String, reasonsEnter: String, date: String) {
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
