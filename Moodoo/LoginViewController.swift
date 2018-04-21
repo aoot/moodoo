@@ -11,19 +11,17 @@ import UIKit
 class LoginViewController: UIViewController {
 
     
-    @IBOutlet weak var txtUsername: UITextField!
-    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtUsername: UITextField!    // Username input field
+    @IBOutlet weak var txtPassword: UITextField!    // Password input field
     
     private var alertController:UIAlertController?
     
     override func viewWillAppear(_ animated: Bool) {
-        PersistenceService.shared.fetchUsers()
+        PersistenceService.shared.fetchUsers()      // Impliment Firebase as DB later
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
