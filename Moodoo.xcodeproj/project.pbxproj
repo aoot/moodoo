@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4CF97017206C8841000478AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97016206C8841000478AC /* AppDelegate.swift */; };
-		4CF9701C206C8841000478AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9701A206C8841000478AC /* Main.storyboard */; };
 		4CF9701F206C8841000478AC /* Moodoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9701D206C8841000478AC /* Moodoo.xcdatamodeld */; };
 		4CF97021206C8841000478AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CF97020206C8841000478AC /* Assets.xcassets */; };
-		4CF97024206C8841000478AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF97022206C8841000478AC /* LaunchScreen.storyboard */; };
 		4CF97030206C9862000478AC /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9702F206C9862000478AC /* PersistenceService.swift */; };
 		4CF97032206CA6CB000478AC /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97031206CA6CB000478AC /* AppUser.swift */; };
 		4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97035206CB23C000478AC /* LoginViewController.swift */; };
@@ -19,20 +17,14 @@
 		4CF9703A207D3A88000478AC /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */; };
 		4CF9703C207D4201000478AC /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CF9703B207D4201000478AC /* Settings.storyboard */; };
 		4CF9703E207D447B000478AC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF9703D207D447B000478AC /* SettingsViewController.swift */; };
-		926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */; };
-		E52C882B208945E100D9858E /* CaptureMood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52C882A208945E100D9858E /* CaptureMood.storyboard */; };
-		E52C882D208946CA00D9858E /* CaptureMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C882C208946CA00D9858E /* CaptureMoodView.swift */; };
-		E52C882F2089472300D9858E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C882E2089472300D9858E /* TabBarController.swift */; };
-		E52C88312089475D00D9858E /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52C88302089475D00D9858E /* CalendarViewController.swift */; };
+		92CD5B3C208AB85500F760EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92CD5B3B208AB85500F760EF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4CF97013206C8841000478AC /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF97016206C8841000478AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CF9701B206C8841000478AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CF9701E206C8841000478AC /* Moodoo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moodoo.xcdatamodel; sourceTree = "<group>"; };
 		4CF97020206C8841000478AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4CF97023206C8841000478AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CF97025206C8841000478AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CF9702F206C9862000478AC /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		4CF97031206CA6CB000478AC /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
@@ -41,11 +33,7 @@
 		4CF97039207D3A88000478AC /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		4CF9703B207D4201000478AC /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		4CF9703D207D447B000478AC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E52C882A208945E100D9858E /* CaptureMood.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = CaptureMood.storyboard; path = Moodoo/CaptureMood.storyboard; sourceTree = SOURCE_ROOT; };
-		E52C882C208946CA00D9858E /* CaptureMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CaptureMoodView.swift; path = Moodoo/CaptureMoodView.swift; sourceTree = SOURCE_ROOT; };
-		E52C882E2089472300D9858E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = Moodoo/TabBarController.swift; sourceTree = SOURCE_ROOT; };
-		E52C88302089475D00D9858E /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = Moodoo/CalendarViewController.swift; sourceTree = SOURCE_ROOT; };
+		92CD5B3B208AB85500F760EF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +76,6 @@
 				4CF97031206CA6CB000478AC /* AppUser.swift */,
 				4CF97025206C8841000478AC /* Info.plist */,
 				4CF9701D206C8841000478AC /* Moodoo.xcdatamodeld */,
-				926ED00E208120BF00E1B5A4 /* GoogleService-Info.plist */,
-				4CF97022206C8841000478AC /* LaunchScreen.storyboard */,
-				92EF1DDA2086EBFC0096DF5A /* Storyboards_Natascha */,
 				92EF1DDB2086EC0C0096DF5A /* Storyboards_Michael */,
 				92EF1DD92086EBD80096DF5A /* Storyboards_Anthony */,
 			);
@@ -104,22 +89,10 @@
 			path = Storyboards_Anthony;
 			sourceTree = "<group>";
 		};
-		92EF1DDA2086EBFC0096DF5A /* Storyboards_Natascha */ = {
-			isa = PBXGroup;
-			children = (
-				E52C882A208945E100D9858E /* CaptureMood.storyboard */,
-				E52C88302089475D00D9858E /* CalendarViewController.swift */,
-				E52C882E2089472300D9858E /* TabBarController.swift */,
-				E52C882C208946CA00D9858E /* CaptureMoodView.swift */,
-			);
-			name = Storyboards_Natascha;
-			path = Storyboards_Anthony;
-			sourceTree = "<group>";
-		};
 		92EF1DDB2086EC0C0096DF5A /* Storyboards_Michael */ = {
 			isa = PBXGroup;
 			children = (
-				4CF9701A206C8841000478AC /* Main.storyboard */,
+				92CD5B3B208AB85500F760EF /* Main.storyboard */,
 				4CF9703B207D4201000478AC /* Settings.storyboard */,
 			);
 			path = Storyboards_Michael;
@@ -184,12 +157,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CF97024206C8841000478AC /* LaunchScreen.storyboard in Resources */,
-				E52C882B208945E100D9858E /* CaptureMood.storyboard in Resources */,
 				4CF97021206C8841000478AC /* Assets.xcassets in Resources */,
-				926ED00F208120C000E1B5A4 /* GoogleService-Info.plist in Resources */,
-				4CF9701C206C8841000478AC /* Main.storyboard in Resources */,
 				4CF9703C207D4201000478AC /* Settings.storyboard in Resources */,
+				92CD5B3C208AB85500F760EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,13 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E52C88312089475D00D9858E /* CalendarViewController.swift in Sources */,
 				4CF97038206D8D70000478AC /* SignUpViewController.swift in Sources */,
 				4CF9703A207D3A88000478AC /* ForgotPasswordViewController.swift in Sources */,
-				E52C882F2089472300D9858E /* TabBarController.swift in Sources */,
 				4CF97030206C9862000478AC /* PersistenceService.swift in Sources */,
 				4CF97032206CA6CB000478AC /* AppUser.swift in Sources */,
-				E52C882D208946CA00D9858E /* CaptureMoodView.swift in Sources */,
 				4CF9701F206C8841000478AC /* Moodoo.xcdatamodeld in Sources */,
 				4CF97036206CB23C000478AC /* LoginViewController.swift in Sources */,
 				4CF97017206C8841000478AC /* AppDelegate.swift in Sources */,
@@ -215,25 +182,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		4CF9701A206C8841000478AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CF9701B206C8841000478AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4CF97022206C8841000478AC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CF97023206C8841000478AC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4CF97026206C8841000478AC /* Debug */ = {

@@ -13,17 +13,19 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var tabBarController: TabBarController?
+//    var tabBarController: TabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // Setup the tab bar controller
         window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
-        tabBarController = TabBarController()
-        window?.rootViewController = tabBarController
+        
+//        tabBarController = TabBarController()
+//        window?.rootViewController = tabBarController
         
         return true
     }
