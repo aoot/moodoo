@@ -2,9 +2,6 @@
 //  AppDelegate.swift
 //  Moodoo
 //
-//  Created by Michael Moscoso on 3/28/18.
-//  Copyright © 2018 Group6. All rights reserved.
-//
 
 import UIKit
 import CoreData
@@ -16,11 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    var tabBarController: TabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         
         // Setup the tab bar controller
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LoginViewController()
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        window?.rootViewController = viewController
+//        window?.rootViewController = LoginViewController()
         window?.makeKeyAndVisible()
         
         
@@ -51,10 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        
         PersistenceService.shared.saveContext()
         
-        // self.saveContext()
-        // what I used in my appDelegate - NB
+        // self.saveContext()  // what I used in my appDelegate - NB
     }
 
     
