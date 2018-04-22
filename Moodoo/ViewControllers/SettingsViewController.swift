@@ -29,10 +29,8 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func btnDeleteData(_ sender:Any) {
-        self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-        self.alertController!.addAction(OKAction)
-        self.present(self.alertController!, animated:true, completion:nil)
+        
+        // delete all the data
         func deleteAllData(entity: String)
         {
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -52,7 +50,23 @@ class SettingsViewController: UIViewController {
             }
         }
         
-        deleteAllData(entity: "Mood")
+        self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // cancel deletion
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action:UIAlertAction) in
+            print("Cancel Button Pressed 1");
+        }
+        self.alertController!.addAction(cancelAction)
+        
+        // when you click OK
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in deleteAllData(entity: "Mood")}
+        self.alertController!.addAction(OKAction)
+        
+        self.present(self.alertController!, animated:true, completion:nil)
+        
+
+        
+        
     }
     
     /*
