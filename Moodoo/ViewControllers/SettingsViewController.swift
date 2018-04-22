@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class SettingsViewController: UIViewController {
 
@@ -26,11 +28,31 @@ class SettingsViewController: UIViewController {
     
     
     
-    @IBAction func btnDeleteData(_ sender: Any) {
+    @IBAction func btnDeleteData(_ sender:Any) {
         self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
         self.alertController!.addAction(OKAction)
         self.present(self.alertController!, animated:true, completion:nil)
+        func deleteAllData(entity: String)
+        {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let managedContext = appDelegate.managedObjectContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+            fetchRequest.returnsObjectsAsFaults = false
+            do
+            {
+                let results = try managedContext.fetch(fetchRequest)
+                for managedObject in results
+                {
+                    let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                    managedContext.delete(managedObjectData)
+                }
+            } catch let error as NSError {
+                print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
+            }
+        }
+        
+        deleteAllData(entity: "Mood")
     }
     
     /*
