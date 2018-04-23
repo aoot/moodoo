@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92DA54D4208E564C00575273 /* SBCalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DA54D3208E564C00575273 /* SBCalendarView.storyboard */; };
+		92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
+		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
+		92DA54DB208E5EE900575273 /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54DA208E5EE900575273 /* CalendarDayCell.swift */; };
 		E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */; };
 		E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54EE480208BFE1B00EC23F8 /* Mood.storyboard */; };
 		E54EE485208BFE1B00EC23F8 /* Moodoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E54EE483208BFE1B00EC23F8 /* Moodoo.xcdatamodeld */; };
@@ -29,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		92DA54D3208E564C00575273 /* SBCalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBCalendarView.storyboard; sourceTree = "<group>"; };
+		92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = "<group>"; };
+		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
+		92DA54DA208E5EE900575273 /* CalendarDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayCell.swift; sourceTree = "<group>"; };
 		E54EE479208BFE1B00EC23F8 /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54EE481208BFE1B00EC23F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mood.storyboard; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,14 +72,25 @@
 			isa = PBXGroup;
 			children = (
 				92DA54D3208E564C00575273 /* SBCalendarView.storyboard */,
+				92DA54DA208E5EE900575273 /* CalendarDayCell.swift */,
+				92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */,
 			);
 			path = Storyboards_Anthony;
 			sourceTree = "<group>";
+		};
+		92DA54D5208E5ABE00575273 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */,
+			);
+			path = Frameworks;
+			sourceTree = SOURCE_ROOT;
 		};
 		E54EE470208BFE1A00EC23F8 = {
 			isa = PBXGroup;
 			children = (
 				E54EE47B208BFE1B00EC23F8 /* Moodoo */,
+				92DA54D5208E5ABE00575273 /* Frameworks */,
 				E54EE47A208BFE1B00EC23F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -226,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92DA54DB208E5EE900575273 /* CalendarDayCell.swift in Sources */,
 				E59E814C208C093200831E42 /* LoginViewController.swift in Sources */,
 				E59E814E208C097300831E42 /* AppUser.swift in Sources */,
 				E5820793208D373800C53982 /* SettingsViewController.swift in Sources */,
@@ -235,6 +254,7 @@
 				E5820794208D373900C53982 /* SignUpViewController.swift in Sources */,
 				E54EE498208BFE7F00EC23F8 /* Calendar.swift in Sources */,
 				E5820792208D373700C53982 /* ForgotPasswordViewController.swift in Sources */,
+				92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */,
 				E54EE494208BFE7000EC23F8 /* TabBarController.swift in Sources */,
 				E54EE485208BFE1B00EC23F8 /* Moodoo.xcdatamodeld in Sources */,
 				E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */,
@@ -391,7 +411,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 799VXWA8ZH;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Moodoo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = utcs.Moodoo;
@@ -406,7 +430,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 799VXWA8ZH;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Moodoo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = utcs.Moodoo;
