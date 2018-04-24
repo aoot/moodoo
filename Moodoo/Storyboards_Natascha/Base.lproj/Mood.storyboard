@@ -12,7 +12,7 @@
         <!--Calendar-->
         <scene sceneID="xdD-80-OaX">
             <objects>
-                <tableViewController storyboardIdentifier="calendarView" title="Calendar" id="aWW-5a-tDi" customClass="Calendar" customModule="Moodoo" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="calendarView" title="Calendar" id="aWW-5a-tDi" customClass="CalendarTableView" customModule="Moodoo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jjH-IO-d2j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
