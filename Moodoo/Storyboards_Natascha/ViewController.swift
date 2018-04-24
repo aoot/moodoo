@@ -44,6 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         var dateStr = dateFormatter.string(from: dateVar as Date)
+        
         if moods.count == 0{
             let alert = UIAlertController(title: "Congrats!",
                                           message: "You logged your mood \(moods.count + 1) time!",

@@ -51,20 +51,23 @@ class TabBarController: UITabBarController {
         // Get each tab's image from the Assets.xcassets (asset catalog) file.
         let image1 = UIImage(named: "image2")
         let image2 = UIImage(named: "image2")
-
+        let  settingsImage = UIImage(named: "settingsIcon")
+        
+        
         // Set each tab's item attributes.
         vc1!.tabBarItem = UITabBarItem(
             title: "Capture",
-            image: image1,
+            image: captureImage,
             tag: 1)
         vc2!.tabBarItem = UITabBarItem(
             title: "Calendar",
-            image: image2,
+            image: calendarImage,
             tag: 2)
         vc3!.tabBarItem = UITabBarItem(
             title: "Settings",
-            image: image2,
-            tag: 2)
+            image: settingsImage,
+            tag: 3)
+        
         
         // Create the array of controllers that make up the tab bar items.
         let controllers:[UIViewController] = [nc1, nc2, nc3]

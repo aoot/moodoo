@@ -112,7 +112,6 @@
 				E570F31C208C06400029098C /* Storyboards_Michael */,
 				E570F31B208C06370029098C /* Storyboards_Natascha */,
 				E570F31A208C06290029098C /* ViewControllers */,
-				E570F319208C06190029098C /* PersistenceService */,
 				E570F318208C060A0029098C /* ClassDefinitions */,
 				E54EE486208BFE1B00EC23F8 /* Assets.xcassets */,
 				E54EE488208BFE1B00EC23F8 /* LaunchScreen.storyboard */,
@@ -144,6 +143,7 @@
 				E570F320208C06EC0029098C /* ForgotPasswordViewController.swift */,
 				E570F322208C06EC0029098C /* SignUpViewController.swift */,
 				E570F323208C06EC0029098C /* SettingsViewController.swift */,
+				E570F319208C06190029098C /* PersistenceService */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
