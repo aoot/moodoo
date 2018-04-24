@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     private var alertController:UIAlertController?
     
     override func viewWillAppear(_ animated: Bool) {
-        PersistenceService.shared.fetchUsers()      // Impliment Firebase as DB later
+        PersistenceService.shared.fetchUsers()
     }
     
     override func viewDidLoad() {
