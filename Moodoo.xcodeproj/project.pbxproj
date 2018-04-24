@@ -11,6 +11,8 @@
 		92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
 		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
 		92DA54DB208E5EE900575273 /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54DA208E5EE900575273 /* CalendarDayCell.swift */; };
+		92DA54DC208EFD6300575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
+		92DA54DD208EFD6300575273 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */; };
 		E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54EE480208BFE1B00EC23F8 /* Mood.storyboard */; };
 		E54EE485208BFE1B00EC23F8 /* Moodoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E54EE483208BFE1B00EC23F8 /* Moodoo.xcdatamodeld */; };
@@ -29,6 +31,20 @@
 		E59E814E208C097300831E42 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E570F31D208C06880029098C /* AppUser.swift */; };
 		E5A76D71208D3C3600758286 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A76D70208D3C3500758286 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92DA54DE208EFD6400575273 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92DA54DD208EFD6300575273 /* JTAppleCalendar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		92DA54D3208E564C00575273 /* SBCalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBCalendarView.storyboard; sourceTree = "<group>"; };
@@ -62,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */,
+				92DA54DC208EFD6300575273 /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +196,7 @@
 				E54EE475208BFE1B00EC23F8 /* Sources */,
 				E54EE476208BFE1B00EC23F8 /* Frameworks */,
 				E54EE477208BFE1B00EC23F8 /* Resources */,
+				92DA54DE208EFD6400575273 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,6 +371,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -402,6 +421,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

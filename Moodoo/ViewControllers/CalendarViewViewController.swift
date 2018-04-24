@@ -38,9 +38,20 @@ class CalendarViewViewController: UIViewController {
 }
 
 extension CalendarViewViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarDayCell", for: indexPath) as! CalendarDayCell
+        cell.dateLabel.text = cellState.text
+        
+        return cell
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+       // What the fuck does this do
+    }
+    
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
-//        formatter.timeZone = Calendar.current.timeZone  // Not sure why cannot access TimeZone and Locale variable
+        formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
         let startDate = formatter.date(from: "2018 01 01")!
@@ -49,10 +60,5 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate, JTAppleCalend
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
     }
-    
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CalendarDayCell", for: indexPath) as! CalendarDayCell
-        cell.dateLabel.text = cellState.text
-        return cell
-    }
+
 }
