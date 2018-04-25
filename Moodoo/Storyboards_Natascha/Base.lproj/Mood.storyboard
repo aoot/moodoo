@@ -25,11 +25,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="dv3-r8-5Q1" kind="show" id="Ast-Py-BmO">
-                                        <nil key="action"/>
-                                    </segue>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -41,7 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkO-fD-faJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="534"/>
+            <point key="canvasLocation" x="330" y="493"/>
         </scene>
         <!--Show Mood View-->
         <scene sceneID="MqA-as-jIQ">
@@ -173,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijS-Kw-EbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="534"/>
+            <point key="canvasLocation" x="-766" y="972"/>
         </scene>
         <!--Enter Mood-->
         <scene sceneID="t97-3C-i3X">
@@ -350,83 +345,37 @@
                         <color key="barTintColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="aWW-5a-tDi" kind="relationship" relationship="viewControllers" id="16Q-86-fDl"/>
                         <segue destination="8jO-6n-XkQ" kind="relationship" relationship="viewControllers" id="hdw-AJ-cAq"/>
-                        <segue destination="b3y-ds-cgM" kind="relationship" relationship="viewControllers" id="LHA-m1-6lj"/>
+                        <segue destination="Fnk-nD-syh" kind="relationship" relationship="viewControllers" id="dOP-LI-m37"/>
+                        <segue destination="RcL-Mz-HJu" kind="relationship" relationship="viewControllers" id="XKR-6q-p8f"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATL-uu-b8z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-380" y="116"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="hO7-AO-fpB">
+        <!--calendarStoryID-->
+        <scene sceneID="bPu-R7-BeF">
             <objects>
-                <viewController storyboardIdentifier="settingsID" title="Settings" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b3y-ds-cgM" customClass="SettingsViewController" customModule="Moodoo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VOw-dA-9hW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCo-y9-kOz">
-                                <rect key="frame" x="284" y="181" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminders Enabled" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNn-Kx-xhk">
-                                <rect key="frame" x="37" y="186" width="239" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="NUS-i5-FA4">
-                                <rect key="frame" x="40" y="246" width="290" height="141"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="545080290.95221996">
-                                    <!--2018-04-10 19:11:30 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azj-Hf-T3Q">
-                                <rect key="frame" x="37" y="102" width="296" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="View/Edit Profile Information"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3L-73-S60">
-                                <rect key="frame" x="146" y="540" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Log Out"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-EP-Xlg">
-                                <rect key="frame" x="71" y="594" width="228" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="DELETE ALL MOOD DATA">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnDeleteData:" destination="b3y-ds-cgM" eventType="touchUpInside" id="9XD-1q-d19"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-Mt-vAt">
-                                <rect key="frame" x="146" y="479" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="About Us"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JJD-f4-Hbm"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="image1" id="FhG-At-6EI"/>
-                    <navigationItem key="navigationItem" id="VNc-aK-Yip"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aCo-Gt-X48" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="SBCalendarView" referencedIdentifier="calendarStoryID" id="RcL-Mz-HJu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="On0-Uv-bOl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Lh-y1-5SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-380" y="885"/>
+            <point key="canvasLocation" x="-679" y="573"/>
+        </scene>
+        <!--settingsID-->
+        <scene sceneID="bOh-2k-DJj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="settingsID" id="Fnk-nD-syh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aPG-nK-cSP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZq-W7-JOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122" y="573"/>
         </scene>
     </scenes>
     <resources>
-        <image name="image1" width="16" height="16"/>
+        <image name="image1" width="30" height="30"/>
     </resources>
 </document>

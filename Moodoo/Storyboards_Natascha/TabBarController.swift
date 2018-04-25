@@ -40,7 +40,7 @@ class TabBarController: UITabBarController {
 
         
         let vc1 = storyboard.instantiateViewController(withIdentifier: "moodCapture") as? ViewController
-        let vc2 = storyboard.instantiateViewController(withIdentifier: "calendarView") as? CalendarTableView
+        let vc2 = storyboard.instantiateViewController(withIdentifier: "calendarStoryID") as? CalendarViewViewController
         let vc3 = storyboard.instantiateViewController(withIdentifier: "settingsID") as? SettingsViewController
         
         // Wrap the view controllers in their own nav controllers.
