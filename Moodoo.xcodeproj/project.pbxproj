@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4847014AAEDAD953F4D853E5 /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */; };
 		92DA54D4208E564C00575273 /* SBCalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DA54D3208E564C00575273 /* SBCalendarView.storyboard */; };
-		92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
 		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
 		92DA54DB208E5EE900575273 /* CalendarDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54DA208E5EE900575273 /* CalendarDayCell.swift */; };
-		92DA54DC208EFD6300575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
-		92DA54DD208EFD6300575273 /* JTAppleCalendar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF28CE77E9D11F4836BC08C1 /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1943FDBECD0518FD778197EF /* Pods_Moodoo.framework */; };
 		E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */; };
 		E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54EE480208BFE1B00EC23F8 /* Mood.storyboard */; };
 		E54EE485208BFE1B00EC23F8 /* Moodoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E54EE483208BFE1B00EC23F8 /* Moodoo.xcdatamodeld */; };
@@ -33,26 +30,11 @@
 		E5A76D71208D3C3600758286 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A76D70208D3C3500758286 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		92DA54DE208EFD6400575273 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92DA54DD208EFD6300575273 /* JTAppleCalendar.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		1943FDBECD0518FD778197EF /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 		26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
-		547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DA54D3208E564C00575273 /* SBCalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBCalendarView.storyboard; sourceTree = "<group>"; };
-		92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = "<group>"; };
 		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
 		92DA54DA208E5EE900575273 /* CalendarDayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayCell.swift; sourceTree = "<group>"; };
 		E54EE479208BFE1B00EC23F8 /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,9 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */,
-				92DA54DC208EFD6300575273 /* JTAppleCalendar.framework in Frameworks */,
-				4847014AAEDAD953F4D853E5 /* Pods_Moodoo.framework in Frameworks */,
+				AF28CE77E9D11F4836BC08C1 /* Pods_Moodoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,22 +89,21 @@
 			path = Storyboards_Anthony;
 			sourceTree = "<group>";
 		};
-		92DA54D5208E5ABE00575273 /* Frameworks */ = {
+		DFFE2DC5E54345026712EAA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */,
-				547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */,
+				1943FDBECD0518FD778197EF /* Pods_Moodoo.framework */,
 			);
-			path = Frameworks;
-			sourceTree = SOURCE_ROOT;
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
 		E54EE470208BFE1A00EC23F8 = {
 			isa = PBXGroup;
 			children = (
 				E54EE47B208BFE1B00EC23F8 /* Moodoo */,
-				92DA54D5208E5ABE00575273 /* Frameworks */,
 				E54EE47A208BFE1B00EC23F8 /* Products */,
 				5BA014C2DB630327C9E8F954 /* Pods */,
+				DFFE2DC5E54345026712EAA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,7 +192,6 @@
 				E54EE475208BFE1B00EC23F8 /* Sources */,
 				E54EE476208BFE1B00EC23F8 /* Frameworks */,
 				E54EE477208BFE1B00EC23F8 /* Resources */,
-				92DA54DE208EFD6400575273 /* Embed Frameworks */,
 				AC0EF3C01B3804FD5621ED58 /* [CP] Embed Pods Frameworks */,
 				2B334D3E783F25E5A3877886 /* [CP] Copy Pods Resources */,
 			);
@@ -299,11 +277,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

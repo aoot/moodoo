@@ -14,5 +14,5 @@ end
 ### Pod files
 target 'Moodoo' do
     pod 'JTAppleCalendar', '~> 7.0'
-    pod 'Firebase'
+    pod 'Firebase/Core'
 end
