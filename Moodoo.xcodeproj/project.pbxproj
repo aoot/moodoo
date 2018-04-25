@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4847014AAEDAD953F4D853E5 /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */; };
 		92DA54D4208E564C00575273 /* SBCalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DA54D3208E564C00575273 /* SBCalendarView.storyboard */; };
 		92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */; };
 		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
@@ -47,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
+		26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
+		547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DA54D3208E564C00575273 /* SBCalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SBCalendarView.storyboard; sourceTree = "<group>"; };
 		92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JTAppleCalendar.framework; sourceTree = "<group>"; };
 		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -79,12 +83,22 @@
 			files = (
 				92DA54D7208E5ABE00575273 /* JTAppleCalendar.framework in Frameworks */,
 				92DA54DC208EFD6300575273 /* JTAppleCalendar.framework in Frameworks */,
+				4847014AAEDAD953F4D853E5 /* Pods_Moodoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BA014C2DB630327C9E8F954 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */,
+				1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		92DA54D2208E562A00575273 /* Storyboards_Anthony */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				92DA54D6208E5ABE00575273 /* JTAppleCalendar.framework */,
+				547010FF36FBF978F9D598DA /* Pods_Moodoo.framework */,
 			);
 			path = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -109,6 +124,7 @@
 				E54EE47B208BFE1B00EC23F8 /* Moodoo */,
 				92DA54D5208E5ABE00575273 /* Frameworks */,
 				E54EE47A208BFE1B00EC23F8 /* Products */,
+				5BA014C2DB630327C9E8F954 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,10 +209,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E54EE48E208BFE1B00EC23F8 /* Build configuration list for PBXNativeTarget "Moodoo" */;
 			buildPhases = (
+				E569088D0A56B9832BE1E2DB /* [CP] Check Pods Manifest.lock */,
 				E54EE475208BFE1B00EC23F8 /* Sources */,
 				E54EE476208BFE1B00EC23F8 /* Frameworks */,
 				E54EE477208BFE1B00EC23F8 /* Resources */,
 				92DA54DE208EFD6400575273 /* Embed Frameworks */,
+				AC0EF3C01B3804FD5621ED58 /* [CP] Embed Pods Frameworks */,
+				2B334D3E783F25E5A3877886 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +275,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B334D3E783F25E5A3877886 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC0EF3C01B3804FD5621ED58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E569088D0A56B9832BE1E2DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Moodoo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E54EE475208BFE1B00EC23F8 /* Sources */ = {
@@ -428,6 +501,7 @@
 		};
 		E54EE48F208BFE1B00EC23F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +521,7 @@
 		};
 		E54EE490208BFE1B00EC23F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

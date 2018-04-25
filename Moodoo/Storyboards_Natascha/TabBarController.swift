@@ -49,7 +49,7 @@ class TabBarController: UITabBarController {
         let nc3 = UINavigationController(rootViewController: vc3!)
         
         // Get each tab's image from the Assets.xcassets (asset catalog) file.
-        let captureImage = UIImage(named: "image2")
+        let captureImage = UIImage(named: "image1")
         let calendarImage = UIImage(named: "image2")
         let settingsImage = UIImage(named: "settingsIcon")
         
