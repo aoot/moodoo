@@ -357,7 +357,7 @@
         <!--calendarStoryID-->
         <scene sceneID="bPu-R7-BeF">
             <objects>
-                <viewControllerPlaceholder storyboardName="SBCalendarView" referencedIdentifier="calendarStoryID" id="RcL-Mz-HJu" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="calendarStoryID" storyboardName="SBCalendarView" referencedIdentifier="calendarStoryID" id="RcL-Mz-HJu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="On0-Uv-bOl"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lh-y1-5SP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -367,12 +367,12 @@
         <!--settingsID-->
         <scene sceneID="bOh-2k-DJj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" referencedIdentifier="settingsID" id="Fnk-nD-syh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="settingsID" storyboardName="Settings" referencedIdentifier="settingsID" id="Fnk-nD-syh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="aPG-nK-cSP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZq-W7-JOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="573"/>
+            <point key="canvasLocation" x="-127" y="572"/>
         </scene>
     </scenes>
     <resources>
