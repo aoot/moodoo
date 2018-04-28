@@ -18,6 +18,7 @@ class ShowMoodView: UIViewController {
     @IBOutlet weak var excitedLabel: UILabel!
     @IBOutlet weak var sadLabel: UILabel!
     @IBOutlet weak var happyLabel: UILabel!
+    
     var mood: NSManagedObject? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
