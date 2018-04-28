@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		92C906952094CF1200587FEA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C906942094CF1200587FEA /* Launch Screen.storyboard */; };
+		92C906972094D55100587FEA /* StreakView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C906962094D55100587FEA /* StreakView.storyboard */; };
+		92C9069B2094D8B300587FEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92C9069A2094D8B300587FEA /* GoogleService-Info.plist */; };
 		92DA54D4208E564C00575273 /* CalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DA54D3208E564C00575273 /* CalendarView.storyboard */; };
 		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
 		92DA54DB208E5EE900575273 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54DA208E5EE900575273 /* CustomCell.swift */; };
@@ -35,6 +37,8 @@
 		1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 		26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
 		92C906942094CF1200587FEA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		92C906962094D55100587FEA /* StreakView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StreakView.storyboard; sourceTree = "<group>"; };
+		92C9069A2094D8B300587FEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92DA54D3208E564C00575273 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
 		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
 		92DA54DA208E5EE900575273 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				92DA54D3208E564C00575273 /* CalendarView.storyboard */,
+				92C906962094D55100587FEA /* StreakView.storyboard */,
 				92DA54DA208E5EE900575273 /* CustomCell.swift */,
 				92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */,
 			);
@@ -127,6 +132,7 @@
 				E570F318208C060A0029098C /* ClassDefinitions */,
 				E54EE486208BFE1B00EC23F8 /* Assets.xcassets */,
 				E54EE48B208BFE1B00EC23F8 /* Info.plist */,
+				92C9069A2094D8B300587FEA /* GoogleService-Info.plist */,
 			);
 			path = Moodoo;
 			sourceTree = "<group>";
@@ -244,11 +250,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54EE487208BFE1B00EC23F8 /* Assets.xcassets in Resources */,
+				92C9069B2094D8B300587FEA /* GoogleService-Info.plist in Resources */,
 				92DA54D4208E564C00575273 /* CalendarView.storyboard in Resources */,
 				E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */,
 				E582079B208D38F300C53982 /* Main.storyboard in Resources */,
 				E5A76D71208D3C3600758286 /* Settings.storyboard in Resources */,
 				92C906952094CF1200587FEA /* Launch Screen.storyboard in Resources */,
+				92C906972094D55100587FEA /* StreakView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
