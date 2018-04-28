@@ -11,6 +11,7 @@
 ## Great resources:
   - [List of great WatchOS frameworks, libraries, sample apps](https://github.com/yenchenlin/awesome-watchos)
   - [Curated color palletes](https://www.instagram.com/colours.cafe/)
+    - [Color pallete used](https://www.instagram.com/p/BhbVwnsBKCg/?taken-by=colours.cafe)
   - [UIlabel fonts](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font)
   - [Charts Library](https://github.com/danielgindi/Charts)
   - [JTAppleCalendar Library](https://github.com/patchthecode/JTAppleCalendar)
