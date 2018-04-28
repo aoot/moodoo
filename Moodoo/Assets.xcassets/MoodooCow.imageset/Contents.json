@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "cow-face-front.png",
       "scale" : "1x"
     },
     {
@@ -10,7 +11,6 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "cow-face-animal-mammal-bull-farm-forest-3c8089c8abd49e7f-512x512.png",
       "scale" : "3x"
     }
   ],
