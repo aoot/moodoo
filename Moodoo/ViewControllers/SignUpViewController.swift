@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
         self.navigationItem.title = "New Account"
         
         // Hard code testing accounts
-        PersistenceService.shared.saveUser(username: "anthony", password: "anthonypw", email: "anthonyylee@utexas.edu")
+        PersistenceService.shared.saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu")
     }
 
     override func didReceiveMemoryWarning() {
