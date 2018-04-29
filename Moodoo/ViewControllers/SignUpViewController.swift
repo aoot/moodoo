@@ -56,6 +56,10 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!)
+                    self.alertController = UIAlertController(title: "Successfully signed up", message: "You can now begin tracking your moods!", preferredStyle: UIAlertControllerStyle.alert)
+                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+                    self.alertController!.addAction(OKAction)
+                    self.present(self.alertController!, animated:true, completion:nil)
                 }
             }
         }

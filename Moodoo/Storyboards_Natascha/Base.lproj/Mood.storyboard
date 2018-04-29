@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ryc-k2-dVy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ryc-k2-dVy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,7 +210,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trust" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FV-db-ujC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trust" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FV-db-ujC">
                                 <rect key="frame" x="109" y="200" width="250" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.74901960779999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -220,7 +220,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disgust" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhH-BU-ANB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Disgust" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhH-BU-ANB">
                                 <rect key="frame" x="16" y="200" width="250" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.74901960779999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -230,7 +230,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U0-Wy-rkh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Anger" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2U0-Wy-rkh">
                                 <rect key="frame" x="16" y="289" width="250" height="21"/>
                                 <color key="backgroundColor" red="0.2196078431372549" green="0.78823529411764703" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -240,7 +240,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fear" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o67-vG-Ver">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Fear" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o67-vG-Ver">
                                 <rect key="frame" x="109" y="289" width="250" height="21"/>
                                 <color key="backgroundColor" red="0.2196078431372549" green="0.78823529411764703" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -250,7 +250,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anticipation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zs-7n-ra4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Anticipation" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zs-7n-ra4">
                                 <rect key="frame" x="109" y="373" width="250" height="21"/>
                                 <color key="backgroundColor" red="0.13725490196078433" green="0.19215686274509802" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -260,7 +260,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Surprise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-ok-aUq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Surprise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-ok-aUq">
                                 <rect key="frame" x="16" y="373" width="250" height="21"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.19215686269999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -270,13 +270,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-JX-KHE">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-JX-KHE">
                                 <rect key="frame" x="260" y="490" width="59" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reasons for moods" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iM-Ls-s24">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Reasons for moods" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iM-Ls-s24">
                                 <rect key="frame" x="46" y="452" width="283" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="283" id="cHb-ym-Owu"/>
@@ -285,47 +285,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
                                 <rect key="frame" x="44" y="224" width="287" height="31"/>
                                 <connections>
                                     <action selector="happySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hg4-6T-nyS"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
-                                <rect key="frame" x="44" y="313" width="287" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
+                                <rect key="frame" x="44" y="142" width="287" height="31"/>
                                 <connections>
-                                    <action selector="happySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="OPY-gs-YmD"/>
                                     <action selector="sadSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="YLg-Hq-pQs"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
-                                <rect key="frame" x="44" y="397" width="287" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
+                                <rect key="frame" x="44" y="335" width="287" height="31"/>
                                 <connections>
                                     <action selector="angrySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="RRT-S8-koq"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnT-3K-tKR">
-                                <rect key="frame" x="125" y="501" width="287" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="283" id="Gn5-7e-SDs"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="anxiousSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="pEQ-ca-VHJ"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-I7-y9Z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfL-I7-y9Z">
                                 <rect key="frame" x="327" y="509" width="18" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.9475692778" blue="0.42063502349999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
-                                <rect key="frame" x="44" y="137" width="287" height="31"/>
-                                <connections>
-                                    <action selector="excitedSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hnl-nN-J4K"/>
-                                </connections>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ys-GM-UbN">
                                 <rect key="frame" x="0.0" y="557" width="375" height="30"/>
                                 <constraints>
@@ -336,6 +320,12 @@
                                     <action selector="saveButton:" destination="8jO-6n-XkQ" eventType="touchUpInside" id="2uW-9E-4Sf"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
+                                <rect key="frame" x="44" y="408" width="287" height="31"/>
+                                <connections>
+                                    <action selector="excitedSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hnl-nN-J4K"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -343,7 +333,6 @@
                             <constraint firstItem="Hyo-ES-R2y" firstAttribute="top" secondItem="TO4-wQ-ZuJ" secondAttribute="top" constant="16" id="3Yl-61-epB"/>
                             <constraint firstItem="NZ9-7M-4zP" firstAttribute="top" secondItem="Wx2-u6-YlJ" secondAttribute="bottom" constant="57" id="5Wg-Ox-8Ss"/>
                             <constraint firstItem="Wx2-u6-YlJ" firstAttribute="top" secondItem="Pxu-Uk-gOk" secondAttribute="bottom" constant="3" id="6iz-Ks-V7I"/>
-                            <constraint firstItem="7Ys-GM-UbN" firstAttribute="top" secondItem="OnT-3K-tKR" secondAttribute="bottom" constant="27" id="6p5-if-vbM"/>
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="height" secondItem="Wx2-u6-YlJ" secondAttribute="height" id="7Al-VA-HVY"/>
                             <constraint firstItem="SoT-ok-aUq" firstAttribute="leading" secondItem="TO4-wQ-ZuJ" secondAttribute="leading" constant="16" id="8a2-Hu-sD7"/>
                             <constraint firstItem="Wx2-u6-YlJ" firstAttribute="top" secondItem="Hyo-ES-R2y" secondAttribute="bottom" constant="73" id="8zb-kf-DN5"/>
@@ -354,7 +343,6 @@
                             <constraint firstItem="TO4-wQ-ZuJ" firstAttribute="trailing" secondItem="4FV-db-ujC" secondAttribute="trailing" constant="16" id="HMI-0z-iZZ"/>
                             <constraint firstItem="ceh-JX-KHE" firstAttribute="leading" secondItem="TO4-wQ-ZuJ" secondAttribute="leading" constant="260" id="Ifc-hA-Se1"/>
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="centerX" secondItem="Wx2-u6-YlJ" secondAttribute="centerX" id="Lqr-Hy-zB3"/>
-                            <constraint firstItem="OnT-3K-tKR" firstAttribute="top" secondItem="1iM-Ls-s24" secondAttribute="bottom" constant="19" id="Osi-C8-jb3"/>
                             <constraint firstItem="TO4-wQ-ZuJ" firstAttribute="trailing" secondItem="sfL-I7-y9Z" secondAttribute="trailing" constant="30" id="PrB-Sn-yh2"/>
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="top" secondItem="LI1-bj-kxr" secondAttribute="bottom" constant="54" id="UQd-31-t6H"/>
                             <constraint firstItem="NZ9-7M-4zP" firstAttribute="top" secondItem="mhH-BU-ANB" secondAttribute="bottom" constant="3" id="VpC-IZ-Hxh"/>
@@ -363,7 +351,6 @@
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="width" secondItem="Wx2-u6-YlJ" secondAttribute="width" id="YNh-Tu-dm4"/>
                             <constraint firstItem="mhH-BU-ANB" firstAttribute="leading" secondItem="TO4-wQ-ZuJ" secondAttribute="leading" constant="16" id="Ysc-lR-eEW"/>
                             <constraint firstItem="LI1-bj-kxr" firstAttribute="top" secondItem="NZ9-7M-4zP" secondAttribute="bottom" constant="59" id="ZaI-y4-hXn"/>
-                            <constraint firstItem="OnT-3K-tKR" firstAttribute="leading" secondItem="TO4-wQ-ZuJ" secondAttribute="leading" constant="127" id="aki-Vw-UcA"/>
                             <constraint firstItem="NZ9-7M-4zP" firstAttribute="top" secondItem="4FV-db-ujC" secondAttribute="bottom" constant="3" id="bIj-Zw-GiN"/>
                             <constraint firstItem="1iM-Ls-s24" firstAttribute="top" secondItem="BKN-MI-nZj" secondAttribute="bottom" constant="25" id="bJn-3J-p4a"/>
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="top" secondItem="SoT-ok-aUq" secondAttribute="bottom" constant="3" id="bs2-tR-Vft"/>
@@ -377,7 +364,6 @@
                             <constraint firstItem="Wx2-u6-YlJ" firstAttribute="top" secondItem="LXZ-Te-CqP" secondAttribute="bottom" constant="3" id="nwd-fw-4EM"/>
                             <constraint firstItem="LXZ-Te-CqP" firstAttribute="leading" secondItem="TO4-wQ-ZuJ" secondAttribute="leading" constant="16" id="p1n-lL-vvM"/>
                             <constraint firstItem="LI1-bj-kxr" firstAttribute="centerX" secondItem="Wx2-u6-YlJ" secondAttribute="centerX" id="pGX-Bd-x31"/>
-                            <constraint firstItem="OnT-3K-tKR" firstAttribute="bottom" secondItem="sfL-I7-y9Z" secondAttribute="bottom" id="pk9-2E-K2g"/>
                             <constraint firstItem="NZ9-7M-4zP" firstAttribute="width" secondItem="Wx2-u6-YlJ" secondAttribute="width" id="r16-I8-feY"/>
                             <constraint firstItem="BKN-MI-nZj" firstAttribute="leading" secondItem="1iM-Ls-s24" secondAttribute="leading" id="rV4-RM-y4g"/>
                             <constraint firstItem="LI1-bj-kxr" firstAttribute="top" secondItem="o67-vG-Ver" secondAttribute="bottom" constant="3" id="svB-Z2-zn5"/>
@@ -396,7 +382,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
                         <outlet property="angryValue" destination="BKN-MI-nZj" id="lNx-uC-Nnf"/>
-                        <outlet property="anxiousValue" destination="OnT-3K-tKR" id="rKj-Np-dGl"/>
                         <outlet property="excitedLabel" destination="sfL-I7-y9Z" id="zpR-D0-HPz"/>
                         <outlet property="excitedValue" destination="Wx2-u6-YlJ" id="e4L-iE-HdH"/>
                         <outlet property="happyValue" destination="NZ9-7M-4zP" id="hDK-HV-Hoz"/>

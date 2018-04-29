@@ -62,6 +62,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logOutButton:" destination="nY1-7c-fGs" eventType="touchUpInside" id="K8f-nl-NlH"/>
+                                    <segue destination="xxA-aW-rqE" kind="modal" id="4ve-kb-MEh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0df-Dk-EL6">
                                 <rect key="frame" x="71" y="594" width="228" height="36"/>
@@ -89,6 +93,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcG-4X-EKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10.4" y="14.842578710644679"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="H8U-Pu-KN7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="xxA-aW-rqE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PwT-yZ-8G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="255"/>
         </scene>
     </scenes>
 </document>

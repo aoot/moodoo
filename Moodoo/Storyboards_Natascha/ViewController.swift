@@ -31,10 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func angrySlider(_ sender: UISlider) {
         sender.value = roundf(sender.value)
     }
-    @IBOutlet weak var anxiousValue: UISlider!
-    @IBAction func anxiousSlider(_ sender: UISlider) {
-        sender.value = roundf(sender.value)
-    }
+
     @IBOutlet weak var reasons: UITextField!
     @IBOutlet weak var sleep: UITextField!
     
@@ -64,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             present(alert, animated: true, completion: nil)
         }
         
-        func saveMood(anxious:String, angry:String, happy:String, excited:String, sad: String, sleepInt: String, reasonsEnter: String, date: String) {
+        func saveMood(angry:String, happy:String, excited:String, sad: String, sleepInt: String, reasonsEnter: String, date: String) {
             
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             
@@ -76,7 +73,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             let mood = NSManagedObject(entity: entity!, insertInto:managedContext)
             
             // Set the attribute values
-            mood.setValue(String(roundf(anxiousValue.value)), forKey: "anxious")
+         
             mood.setValue(String(roundf(angryValue.value)), forKey: "angry")
             mood.setValue(String(roundf(happyValue.value)), forKey: "happy")
             mood.setValue(String(roundf(sadValue.value)), forKey: "sad")
@@ -99,7 +96,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             moods.append(mood)
         }
         
-        saveMood(anxious: String(roundf(anxiousValue.value)), angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleepInt: sleep.text!, reasonsEnter: reasons.text!, date: dateStr)
+        saveMood(angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleepInt: sleep.text!, reasonsEnter: reasons.text!, date: dateStr)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,7 +106,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
         formatter.timeStyle = .none
         let str = formatter.string(from: Date())
         self.navigationItem.title = str
-        anxiousValue.value = 0
         angryValue.value = 0
         happyValue.value = 0
         sadValue.value = 0

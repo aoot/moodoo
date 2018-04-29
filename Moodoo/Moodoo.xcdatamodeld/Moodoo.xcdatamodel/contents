@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G1314" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Mood" representedClassName="Mood" syncable="YES" codeGenerationType="class">
         <attribute name="angry" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="anxious" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="excited" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="happy" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,7 +15,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Mood" positionX="-36" positionY="9" width="128" height="165"/>
+        <element name="Mood" positionX="-36" positionY="9" width="128" height="150"/>
         <element name="User" positionX="-36" positionY="72" width="128" height="90"/>
     </elements>
 </model>

@@ -12,6 +12,9 @@ import CoreData
 
 class SettingsViewController: UIViewController {
 
+    @IBAction func logOutButton(_ sender: Any) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
     private var alertController:UIAlertController?
     
     override func viewDidLoad() {
