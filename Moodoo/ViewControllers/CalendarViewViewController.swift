@@ -8,12 +8,13 @@
 
 import UIKit
 import JTAppleCalendar   // Third party framework
+import CoreData
+
 
 class CalendarViewViewController: UIViewController {
 
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var month: UILabel!
+
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -44,14 +45,31 @@ class CalendarViewViewController: UIViewController {
 }
 
 extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
-    
+
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // Getting managed object context
+        let managedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        do{
+            let records = try managedObjectContext.fetch(Mood.fetchRequest())
+            
+            let firstMoodRecord:Mood = records.first as! Mood
+            
+            let targetDate = firstMoodRecord.date! as String
+
+        } catch (let error) {
+        print("Error occured - \(error) ")
+        }
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
+       
         
-        let startDate = formatter.date(from: "2018 01 01")!
-        let endDate = formatter.date(from: "2018 12 31")!
+        let startDate = formatter.date(from: "2018 12 31")!
+        let endDate = formatter.date(from: "2199 12 31")!
         
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
@@ -60,6 +78,7 @@ extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
        // What the fuck does this do
     }
+    
 }
 
 extension CalendarViewViewController: JTAppleCalendarViewDelegate {
@@ -87,12 +106,5 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
         // show visibility of selected view
         validCell.selectedView.isHidden = true
     }
-        
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        let date = visibleDates.monthDates.first!.date
-        formatter.dateFormat = "yyyy"
-        year.text = formatter.string(from: date)
-        formatter.dateFormat = "MMMM"
-        month.text = formatter.string(from: date)
-        }
+
 }
