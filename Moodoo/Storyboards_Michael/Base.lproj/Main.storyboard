@@ -151,13 +151,13 @@
             </objects>
             <point key="canvasLocation" x="220" y="202.84857571214394"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="NPz-S0-yu3">
+        <!--Mood-->
+        <scene sceneID="dHb-oy-HRu">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="DTT-DJ-BOr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DwF-be-TMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="moodCapture" storyboardName="Mood" id="Qif-tZ-4ey" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLv-3n-Zcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="224"/>
+            <point key="canvasLocation" x="1936" y="-41"/>
         </scene>
         <!--Mood-->
         <scene sceneID="8xF-Fh-ZaD">
@@ -211,6 +211,7 @@
                                 <state key="normal" title="Create Account"/>
                                 <connections>
                                     <action selector="btnCreateAccount:" destination="kHg-U7-LKZ" eventType="touchUpInside" id="id6-FC-VfO"/>
+                                    <segue destination="Qif-tZ-4ey" kind="show" id="P32-tT-B3L"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DF0-iD-gDx">
