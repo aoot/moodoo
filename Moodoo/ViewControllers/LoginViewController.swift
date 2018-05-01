@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        txtUsername.delegate = self
+        txtPassword.delegate = self
+        
         assignbackground()
     }
     
@@ -68,6 +72,7 @@ class LoginViewController: UIViewController {
                 }
                 else {
                     // THEN YOU CAN FINALLY LOG IN
+                    PersistenceService.shared.setCurrentUser(username: txtUsername.text!)
                 }
             }
         }
@@ -80,4 +85,19 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 'First Responder' is the same as 'input focus'.
+        // We are removing input focus from the text field.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user touches on the main view (outside the UITextField).
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // This causes the keyboard to be dismissed.
+        self.view.endEditing(true)
+    }
 }

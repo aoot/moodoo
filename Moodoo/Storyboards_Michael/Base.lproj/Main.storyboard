@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hUx-47-TGX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hUx-47-TGX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GillSans.ttc">
-            <string>GillSans-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tTJ-7q-C58">
@@ -157,7 +152,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="moodCapture" storyboardName="Mood" id="Qif-tZ-4ey" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLv-3n-Zcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936" y="-41"/>
+            <point key="canvasLocation" x="1998" y="-207"/>
         </scene>
         <!--Mood-->
         <scene sceneID="8xF-Fh-ZaD">
@@ -165,7 +160,7 @@
                 <viewControllerPlaceholder storyboardName="Mood" id="oQW-3o-s2D" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELB-S0-y1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1453" y="224"/>
+            <point key="canvasLocation" x="1256" y="202"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="XtS-9w-Wld">
@@ -412,6 +407,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MoodooCow" width="512" height="512"/>
+        <image name="MoodooCow" width="30" height="30"/>
     </resources>
 </document>

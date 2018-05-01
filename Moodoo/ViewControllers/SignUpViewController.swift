@@ -19,10 +19,13 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "New Account"
         
-        // Hard code testing accounts
-        PersistenceService.shared.saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu")
+        txtNewUsername.delegate = self
+        txtNewPassword.delegate = self
+        txtConfirmPassword.delegate = self
+        txtNewEmail.delegate = self
+        
+        self.navigationItem.title = "New Account"
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,7 +58,7 @@ class SignUpViewController: UIViewController {
                     self.present(self.alertController!, animated:true, completion:nil)
                 }
                 else {
-                    PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!)
+                    PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!, moodCount: 0)
                 }
             }
         }
@@ -73,4 +76,19 @@ class SignUpViewController: UIViewController {
     }
     */
 
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 'First Responder' is the same as 'input focus'.
+        // We are removing input focus from the text field.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    // Called when the user touches on the main view (outside the UITextField).
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        // This causes the keyboard to be dismissed.
+        self.view.endEditing(true)
+    }
 }
