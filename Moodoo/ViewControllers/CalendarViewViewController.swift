@@ -12,8 +12,10 @@ import CoreData
 
 class CalendarViewViewController: UIViewController {
 
-    @IBOutlet weak var calendarView: JTAppleCalendarView!
-
+    @IBOutlet weak var calendarView: JTAppleCalendarView! 
+    @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var year: UILabel!
+    
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -84,6 +86,15 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
         guard let validCell = cell as? CustomCell else {return}
          //show visibility of selected view
         validCell.selectedView.isHidden = false
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+        let date = visibleDates.monthDates.first!.date
+        formatter.dateFormat = "yyyy"
+        year.text = formatter.string(from:date)
+        
+        formatter.dateFormat = "MMMM"
+        month.text = formatter.string(from:date)
     }
     
     //func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
