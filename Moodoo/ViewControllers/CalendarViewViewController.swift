@@ -80,11 +80,11 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
         return cell
     }
     
-    //func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-       // guard let validCell = cell as? CustomCell else {return}
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? CustomCell else {return}
          //show visibility of selected view
-       // validCell.selectedView.isHidden = false
-  //  }
+        validCell.selectedView.isHidden = false
+    }
     
     //func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
       //  guard let validCell = cell as? CustomCell else {return}

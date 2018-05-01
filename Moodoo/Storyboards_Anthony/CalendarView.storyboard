@@ -90,6 +90,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="73" height="79"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzU-ls-C9n">
+                                                            <rect key="frame" x="16" y="20" width="40" height="40"/>
+                                                            <color key="backgroundColor" red="0.13601541519999999" green="0.19048333170000001" blue="0.39608383180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB2-Ve-Mua">
                                                             <rect key="frame" x="15" y="29.5" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -101,9 +105,12 @@
                                                 <constraints>
                                                     <constraint firstItem="eB2-Ve-Mua" firstAttribute="centerY" secondItem="lFW-6a-JAt" secondAttribute="centerY" id="80b-my-7Og"/>
                                                     <constraint firstItem="eB2-Ve-Mua" firstAttribute="centerX" secondItem="lFW-6a-JAt" secondAttribute="centerX" id="ENB-4s-tca"/>
+                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="centerY" secondItem="lFW-6a-JAt" secondAttribute="centerY" id="Ja2-Lo-LFa"/>
+                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="centerX" secondItem="lFW-6a-JAt" secondAttribute="centerX" id="o3t-h6-Mea"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="eB2-Ve-Mua" id="GTP-7F-7Xt"/>
+                                                    <outlet property="selectedView" destination="WzU-ls-C9n" id="G8c-sr-V2U"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
