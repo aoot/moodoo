@@ -9,15 +9,17 @@
 import Foundation
 
 class AppUser {
+    
     var username:String
     var password:String
     var email:String
+    var moodCount:Int
     
-    init(username:String, password:String, email:String) {
+    init(username:String, password:String, email:String, moodCount:Int) {
         self.username = username
         self.password = password
         self.email = email
+        self.moodCount = moodCount
     }
     
-    // TO DO - add more fields + methods
 }

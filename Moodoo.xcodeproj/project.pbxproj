@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CB83D252098356B00B1ECF7 /* UserMood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB83D242098356B00B1ECF7 /* UserMood.swift */; };
 		92C906952094CF1200587FEA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C906942094CF1200587FEA /* Launch Screen.storyboard */; };
 		92C906972094D55100587FEA /* StreakView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92C906962094D55100587FEA /* StreakView.storyboard */; };
 		92C9069B2094D8B300587FEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92C9069A2094D8B300587FEA /* GoogleService-Info.plist */; };
@@ -36,6 +37,7 @@
 		1943FDBECD0518FD778197EF /* Pods_Moodoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F56DFF056C027989F1BA488 /* Pods-Moodoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.release.xcconfig"; sourceTree = "<group>"; };
 		26EAE957C74C8B690A0B02D4 /* Pods-Moodoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodoo/Pods-Moodoo.debug.xcconfig"; sourceTree = "<group>"; };
+		4CB83D242098356B00B1ECF7 /* UserMood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMood.swift; sourceTree = "<group>"; };
 		92C906942094CF1200587FEA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		92C906962094D55100587FEA /* StreakView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StreakView.storyboard; sourceTree = "<group>"; };
 		92C9069A2094D8B300587FEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				E570F31D208C06880029098C /* AppUser.swift */,
+				4CB83D242098356B00B1ECF7 /* UserMood.swift */,
 				92C906942094CF1200587FEA /* Launch Screen.storyboard */,
 			);
 			path = ClassDefinitions;
@@ -337,6 +340,7 @@
 				E5820792208D373700C53982 /* ForgotPasswordViewController.swift in Sources */,
 				92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */,
 				E54EE494208BFE7000EC23F8 /* TabBarController.swift in Sources */,
+				4CB83D252098356B00B1ECF7 /* UserMood.swift in Sources */,
 				E54EE485208BFE1B00EC23F8 /* Moodoo.xcdatamodeld in Sources */,
 				E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */,
 			);

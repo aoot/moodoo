@@ -8,12 +8,12 @@
 
 import UIKit
 import JTAppleCalendar   // Third party framework
+import CoreData
 
 class CalendarViewViewController: UIViewController {
 
     @IBOutlet weak var calendarView: JTAppleCalendarView!
-    @IBOutlet weak var year: UILabel!
-    @IBOutlet weak var month: UILabel!
+
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -22,8 +22,8 @@ class CalendarViewViewController: UIViewController {
     }
 
     func setupCalendarView(){
-        calendarView.minimumLineSpacing = 0
-        calendarView.minimumInteritemSpacing = 0
+        //calendarView.minimumLineSpacing = 0
+        //calendarView.minimumInteritemSpacing = 0
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,55 +44,52 @@ class CalendarViewViewController: UIViewController {
 }
 
 extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
-    
+
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+
+        
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
-        
-        let startDate = formatter.date(from: "2018 01 01")!
+       
+        let finalStartDate = formatter.date(from: "2018 01 01")!
         let endDate = formatter.date(from: "2018 12 31")!
         
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let parameters = ConfigurationParameters(startDate: finalStartDate, endDate: endDate)
         return parameters
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-       // What the fuck does this do
+   func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+       // makes other extension work somehow
     }
+    
 }
 
 extension CalendarViewViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        // display the cell
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.dateLabel.text = cellState.text
         
-        if cellState.isSelected {
-            cell.selectedView.isHidden = false
-        }
-        else{
-            cell.selectedView.isHidden = true
-        }
+       // if cellState.isSelected {
+         //   cell.selectedView.isHidden = false
+        //}
+        //else{
+          //cell.selectedView.isHidden = true
+        //}
         return cell
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         guard let validCell = cell as? CustomCell else {return}
-        // show visibility of selected view
+         //show visibility of selected view
         validCell.selectedView.isHidden = false
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        guard let validCell = cell as? CustomCell else {return}
-        // show visibility of selected view
-        validCell.selectedView.isHidden = true
-    }
-        
-    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
-        let date = visibleDates.monthDates.first!.date
-        formatter.dateFormat = "yyyy"
-        year.text = formatter.string(from: date)
-        formatter.dateFormat = "MMMM"
-        month.text = formatter.string(from: date)
-        }
+    //func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+      //  guard let validCell = cell as? CustomCell else {return}
+         //show visibility of selected view
+        //validCell.selectedView.isHidden = true
+    //}
+
 }
