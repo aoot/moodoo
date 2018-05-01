@@ -11,7 +11,7 @@ import Firebase
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var txtNewUsername: UITextField!
+    @IBOutlet weak var txtNewUsername: UITextField!    // TODO: Replace username with just email
     @IBOutlet weak var txtNewPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var txtNewEmail: UITextField!
@@ -35,6 +35,15 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func btnCreateAccount(_ sender: Any) {
+        
+        // TODO:
+        // - Firebase user persistence fixed VC
+        // - Forgot my password email
+        // - Use email for username
+        // - Verify with firebase when signing in
+        // - When sign up, receive email
+        
+        
         if (txtNewUsername.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "" || txtNewEmail.text == "") {
             self.alertController = UIAlertController(title: "Validation Error", message: "All fields are required", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
@@ -49,9 +58,9 @@ class SignUpViewController: UIViewController {
                 self.present(self.alertController!, animated:true, completion:nil)
             }
             else {
-                
+
                 let user = PersistenceService.shared.getUser(name: txtNewUsername.text!)
-                
+
                 if user.username != "<bad>" {
                     self.alertController = UIAlertController(title: "Validation Error", message: "Username taken - please try another one", preferredStyle: UIAlertControllerStyle.alert)
                     let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
@@ -60,26 +69,16 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!, moodCount: 0)
-                   
-//                    Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
-//                        self.hideSpinner {
-//                            if let error = error {
-//                                self.showMessagePrompt(error.localizedDescription)
-//                                return
-//                            }
-//                            print("\(user!.email!) created")
-//                            self.navigationController!.popViewController(animated: true)
-//                        }
-//                    }
+
+
                     
+                    }
                 }
             }
+            }
         }
-    }
-    
-    @IBAction func btnCancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+
+
 
     /*
     // MARK: - Navigation
@@ -89,7 +88,12 @@ class SignUpViewController: UIViewController {
     }
     */
 
-}
+
+
+
+
+
+
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -104,4 +108,5 @@ extension SignUpViewController: UITextFieldDelegate {
         // This causes the keyboard to be dismissed.
         self.view.endEditing(true)
     }
+
 }
