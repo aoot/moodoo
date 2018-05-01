@@ -125,6 +125,7 @@
 		E54EE47B208BFE1B00EC23F8 /* Moodoo */ = {
 			isa = PBXGroup;
 			children = (
+				E570F319208C06190029098C /* PersistenceService */,
 				E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */,
 				E54EE483208BFE1B00EC23F8 /* Moodoo.xcdatamodeld */,
 				92DA54D2208E562A00575273 /* Storyboards_Anthony */,
@@ -164,7 +165,6 @@
 				E570F320208C06EC0029098C /* ForgotPasswordViewController.swift */,
 				E570F322208C06EC0029098C /* SignUpViewController.swift */,
 				E570F323208C06EC0029098C /* SettingsViewController.swift */,
-				E570F319208C06190029098C /* PersistenceService */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
