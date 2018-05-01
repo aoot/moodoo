@@ -46,31 +46,40 @@ class CalendarViewViewController: UIViewController {
 extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
 
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        // Getting managed object context
-        let managedObjectContext = appDelegate.persistentContainer.viewContext
-        
-        do{
-            let records = try managedObjectContext.fetch(Mood.fetchRequest())
-            
-            let firstMoodRecord:Mood = records.first as! Mood
-            
-            let targetDate = firstMoodRecord.date! as String
-
-        } catch (let error) {
-        print("Error occured - \(error) ")
+        var startDate = "1999 12 10"
+        let fetchRequest = NSFetchRequest<Mood>(entityName: "Mood")
+        do {
+            // fetch date of first entry and set it to the start date of the calendar
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            // Getting managed object context
+            let managedObjectContext = appDelegate.persistentContainer.viewContext
+            let fetchedResults = try managedObjectContext.fetch(fetchRequest)
+            if fetchedResults.count > 0 {
+                let moodObject: Mood = fetchedResults[0]
+                startDate = (moodObject.date!)
+            }
+            else{
+                // if there isn't another entry, start date should be first of the current month
+                let dateFormatter = DateFormatter()
+                let date = NSDate()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let calendar = NSCalendar.current
+                let components = Calendar.current.dateComponents([.year, .month], from: Date())
+                startDate = String(describing: Calendar.current.date(from: components)!)
+            }
+        } catch let error as NSError {
+            // something went wrong, print the error.
+            print(error.description)
         }
+        
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
        
-        
-        let startDate = formatter.date(from: "2018 12 31")!
+        let finalStartDate = formatter.date(from: startDate)!
         let endDate = formatter.date(from: "2199 12 31")!
         
-        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let parameters = ConfigurationParameters(startDate: finalStartDate, endDate: endDate)
         return parameters
     }
     
