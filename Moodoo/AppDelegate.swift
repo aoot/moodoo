@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Firebase
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -28,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //tabBarController = TabBarController()
         //window?.rootViewController = tabBarController
         
-        // Firebase configuration
+        // Initialize FirebaseApp object
         FirebaseApp.configure()
         
         return true

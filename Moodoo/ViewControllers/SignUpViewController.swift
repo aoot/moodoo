@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpViewController: UIViewController {
     
@@ -59,6 +60,18 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!, moodCount: 0)
+                   
+//                    Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
+//                        self.hideSpinner {
+//                            if let error = error {
+//                                self.showMessagePrompt(error.localizedDescription)
+//                                return
+//                            }
+//                            print("\(user!.email!) created")
+//                            self.navigationController!.popViewController(animated: true)
+//                        }
+//                    }
+                    
                 }
             }
         }
