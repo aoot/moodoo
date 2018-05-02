@@ -220,7 +220,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <action selector="btnCancel:" destination="kHg-U7-LKZ" eventType="touchUpInside" id="kZK-pU-vX3"/>
+                                    <action selector="btnCancel:" destination="kHg-U7-LKZ" eventType="touchUpInside" id="v4f-W0-sOB"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mc0-QD-hHh">
