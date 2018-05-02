@@ -41,8 +41,7 @@ class SignUpViewController: UIViewController {
         // - Forgot my password email
         // - Use email for username
         // - Verify with firebase when signing in
-        // - When sign up, receive email
-        
+        // - When sign up, receive email confirmation
         
         if (txtNewUsername.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "" || txtNewEmail.text == "") {
             self.alertController = UIAlertController(title: "Validation Error", message: "All fields are required", preferredStyle: UIAlertControllerStyle.alert)
@@ -69,16 +68,11 @@ class SignUpViewController: UIViewController {
                 }
                 else {
                     PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!, moodCount: 0)
-
-
-                    
-                    }
                 }
             }
-            }
         }
-
-
+    }
+}
 
     /*
     // MARK: - Navigation
@@ -87,13 +81,6 @@ class SignUpViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-
-
-
-
-
-
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
