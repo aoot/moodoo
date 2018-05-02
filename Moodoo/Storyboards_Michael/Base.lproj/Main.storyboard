@@ -55,7 +55,7 @@
                                     <segue destination="kHg-U7-LKZ" kind="show" identifier="SignUp" id="Kap-gd-Pfo"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-hS-rtp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TZ-hS-rtp">
                                 <rect key="frame" x="0.0" y="332" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="GMB-gb-KjC"/>
@@ -138,8 +138,8 @@
                         <viewLayoutGuide key="safeArea" id="oRg-CO-2Gf"/>
                     </view>
                     <connections>
+                        <outlet property="txtEmail" destination="4TZ-hS-rtp" id="3eD-Xm-POk"/>
                         <outlet property="txtPassword" destination="uZ9-9g-xhQ" id="FyI-0M-MF1"/>
-                        <outlet property="txtUsername" destination="4TZ-hS-rtp" id="N3G-fJ-x5T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xE0-2q-fLC" sceneMemberID="firstResponder"/>
