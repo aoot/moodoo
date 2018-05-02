@@ -16,6 +16,7 @@ class CalendarViewViewController: UIViewController {
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var year: UILabel!
     
+    private var cellSelected: CustomCell?
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
@@ -26,10 +27,22 @@ class CalendarViewViewController: UIViewController {
             self.SetUpViewsOfCalendar(from: visibleDates)
         }
     }
+    
     func handleCellSelected(view: JTAppleCell?, cellState: CellState){
+        
         guard let validCell = view as? CustomCell else { return }
         if validCell.isSelected {
-           performSegue(withIdentifier: "showMoodSegue", sender: nil)
+            
+            cellSelected = validCell
+            if PersistenceService.shared.checkMoodForDay(date: cellSelected!.date!) {
+                performSegue(withIdentifier: "showMoodSegue", sender: nil)
+            }
+            else {
+                let alertController = UIAlertController(title: "No Data", message: "You didn't enter a mood for that day", preferredStyle: UIAlertControllerStyle.alert)
+                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+                alertController.addAction(OKAction)
+                present(alertController, animated:true, completion:nil)
+            }
             
             // match with mood in persistent service (worry about this later). *** programtically define segueway (look at tableview controller stuff) ***
             validCell.selectedView.isHidden = false
@@ -67,15 +80,13 @@ class CalendarViewViewController: UIViewController {
         self.month.text = self.formatter.string(from:date)
     }
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showMoodSegue" {
+            let destinationVC = segue.destination as! ShowMoodView
+            destinationVC.mood = PersistenceService.shared.getMood(date: cellSelected!.date!)
+        }
     }
-    */
 
 }
 
@@ -105,6 +116,7 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
         // display the cell
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.dateLabel.text = cellState.text
+        cell.date = date
 
         handleCellTextcolor(view: cell, cellState: cellState)
 
@@ -133,7 +145,6 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
     }
-    
 
 
 }

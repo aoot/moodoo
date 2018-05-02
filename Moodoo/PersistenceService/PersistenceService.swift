@@ -12,7 +12,7 @@ import CoreData
 class PersistenceService {
     
     private init() {
-        saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu", moodCount: 0)
+        //saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu", moodCount: 0)
     }
     
     static let shared = PersistenceService()
@@ -27,20 +27,11 @@ class PersistenceService {
     }
     
     func refreshData() {
-        
         fetchUsers()
         fetchMoods()
-        
-        for user in users {
-            if user.value(forKey: "username") as! String == currentUser!.username {
-                user.setValue(moods.count, forKey: "moodCount")
-                currentUser?.moodCount = moods.count
-            }
-        }
-        
+        setMoodCount()
         saveContext()
     }
-    
     
     // MARK: - Core Data stack
     private var context: NSManagedObjectContext {
@@ -200,11 +191,12 @@ extension PersistenceService {
         }
     }
     
-    func getMood(date:String) -> UserMood {
+    func getMood(date: Date) -> UserMood {
+        
         for mood in moods {
-            let d = mood.value(forKey: "date") as! String
             
-            if d == date {
+            let d = mood.value(forKey: "date") as! String
+            if d == DateFormatter.localizedString(from: date, dateStyle: .long, timeStyle: .none) {
                 let a = mood.value(forKey: "angry") as! String
                 let h = mood.value(forKey: "happy") as! String
                 let e = mood.value(forKey: "excited") as! String
@@ -217,6 +209,10 @@ extension PersistenceService {
         }
         
         return UserMood(angry: "<bad>", happy: "<bad>", excited: "<bad>", sad: "<bad>", sleep: "<bad>", reasons: "<bad>", date: "01/01/2001", user: currentUser!)
+    }
+    
+    func checkMoodForDay(date: Date) -> Bool {
+        return getMood(date: date).angry != "<bad>"
     }
     
     func deleteAllMoods() {
@@ -236,6 +232,15 @@ extension PersistenceService {
             }
         } catch let error as NSError {
             print("Delete all data in Mood error : \(error) \(error.userInfo)")
+        }
+    }
+    
+    func setMoodCount() {
+        for user in users {
+            if user.value(forKey: "username") as! String == currentUser!.username {
+                user.setValue(moods.count, forKey: "moodCount")
+                currentUser?.moodCount = moods.count
+            }
         }
     }
     

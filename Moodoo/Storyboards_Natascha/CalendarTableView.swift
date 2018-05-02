@@ -74,9 +74,9 @@ class CalendarTableView: UITableViewController {
     }
 //
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destination as? ShowMoodView,
-            let selectedIndexPath = tableView.indexPathForSelectedRow {
-            destinationVC.mood = moods[selectedIndexPath.row]
+        if let destinationVC = segue.destination as? ShowMoodView {
+            //let selectedIndexPath = tableView.indexPathForSelectedRow
+            //destinationVC.mood = moods[selectedIndexPath.row]
         }
         
     }

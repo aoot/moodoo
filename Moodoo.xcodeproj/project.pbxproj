@@ -14,7 +14,6 @@
 		92DA54D4208E564C00575273 /* CalendarView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DA54D3208E564C00575273 /* CalendarView.storyboard */; };
 		92DA54D9208E5B1F00575273 /* CalendarViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */; };
 		92DA54DB208E5EE900575273 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DA54DA208E5EE900575273 /* CustomCell.swift */; };
-		A00F25A7209942B1000476FB /* ShowMoods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00F25A6209942B1000476FB /* ShowMoods.storyboard */; };
 		AF28CE77E9D11F4836BC08C1 /* Pods_Moodoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1943FDBECD0518FD778197EF /* Pods_Moodoo.framework */; };
 		E54EE47D208BFE1B00EC23F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */; };
 		E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54EE480208BFE1B00EC23F8 /* Mood.storyboard */; };
@@ -45,7 +44,6 @@
 		92DA54D3208E564C00575273 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
 		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
 		92DA54DA208E5EE900575273 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		A00F25A6209942B1000476FB /* ShowMoods.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowMoods.storyboard; sourceTree = "<group>"; };
 		E54EE479208BFE1B00EC23F8 /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54EE481208BFE1B00EC23F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mood.storyboard; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 				92DA54D3208E564C00575273 /* CalendarView.storyboard */,
 				92C906962094D55100587FEA /* StreakView.storyboard */,
 				92DA54DA208E5EE900575273 /* CustomCell.swift */,
-				A00F25A6209942B1000476FB /* ShowMoods.storyboard */,
 				E54EE495208BFE7800EC23F8 /* ShowMoodView.swift */,
 				92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */,
 			);
@@ -256,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54EE487208BFE1B00EC23F8 /* Assets.xcassets in Resources */,
-				A00F25A7209942B1000476FB /* ShowMoods.storyboard in Resources */,
 				92C9069B2094D8B300587FEA /* GoogleService-Info.plist in Resources */,
 				92DA54D4208E564C00575273 /* CalendarView.storyboard in Resources */,
 				E54EE482208BFE1B00EC23F8 /* Mood.storyboard in Resources */,
