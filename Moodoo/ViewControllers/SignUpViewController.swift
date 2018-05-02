@@ -21,6 +21,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var iconClick: Bool!    // Used to toggle password visibility --> Implement later https://stackoverflow.com/questions/37873119/how-to-toggle-a-uitextfield-secure-text-entry-hide-password-in-swift
+        
+        // Set password txtfields as secure entries
+        txtNewPassword.isSecureTextEntry = true
+        txtConfirmPassword.isSecureTextEntry = true
+        
         txtNewUsername.delegate = self
         txtNewPassword.delegate = self
         txtConfirmPassword.delegate = self
@@ -37,23 +43,18 @@ class SignUpViewController: UIViewController {
     @IBAction func btnCreateAccount(_ sender: Any) {
         
         // TODO:
-        // - Firebase user persistence fixed VC
-        // - Forgot my password email
-        // - Use email for username
-        // - Verify with firebase when signing in
+        // - Update signup page design and remove username textfield
+        // o Hash the password textfield in the signup page
+        // - Set up password retrieval email
+        // - Remove username parameter - and use email as username instead --> Michael?
+        // - Setup Firebase user authentication
+        //  - Then pass it to Michael to update the coredata user information
         
         Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
             print("\(user!.email!) created")
         }
     }
 }
-
-
-
-
-
-
-
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

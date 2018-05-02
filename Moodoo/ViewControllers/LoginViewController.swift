@@ -23,6 +23,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Secure text entry for password
+        txtPassword.isSecureTextEntry = true
+        
         txtUsername.delegate = self
         txtPassword.delegate = self
         
