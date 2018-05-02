@@ -128,6 +128,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-JX-KHE">
+                                <rect key="frame" x="241" y="522" width="25" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Reasons for mood" borderStyle="roundedRect" placeholder="Reasons for moods" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1iM-Ls-s24">
                                 <rect key="frame" x="46" y="452" width="283" height="30"/>
                                 <constraints>
@@ -137,22 +143,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
                                 <rect key="frame" x="44" y="224" width="287" height="31"/>
                                 <connections>
                                     <action selector="happySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hg4-6T-nyS"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
                                 <rect key="frame" x="44" y="142" width="287" height="31"/>
                                 <connections>
                                     <action selector="sadSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="YLg-Hq-pQs"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
                                 <rect key="frame" x="44" y="335" width="287" height="31"/>
                                 <connections>
                                     <action selector="angrySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="RRT-S8-koq"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
+                                <rect key="frame" x="44" y="408" width="287" height="31"/>
+                                <connections>
+                                    <action selector="excitedSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hnl-nN-J4K"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ys-GM-UbN">
@@ -165,12 +177,6 @@
                                     <action selector="saveButton:" destination="8jO-6n-XkQ" eventType="touchUpInside" id="2uW-9E-4Sf"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
-                                <rect key="frame" x="44" y="408" width="287" height="31"/>
-                                <connections>
-                                    <action selector="excitedSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hnl-nN-J4K"/>
-                                </connections>
-                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joyful" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxu-Uk-gOk">
                                 <rect key="frame" x="109" y="113" width="250" height="21"/>
                                 <color key="backgroundColor" red="0.81176470590000005" green="0.31372549020000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -187,12 +193,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-JX-KHE">
-                                <rect key="frame" x="241" y="522" width="25" height="25"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
