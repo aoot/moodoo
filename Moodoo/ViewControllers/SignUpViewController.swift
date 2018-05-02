@@ -40,10 +40,9 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    func btnCancel (_ sender: Any) {
-//        let vc: LoginViewController = LoginViewController()
-//        self.present(vc, animated: true, completion: nil)
-//    }
+    @IBAction func btnCancel(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func btnCreateAccount(_ sender: Any) {
         
