@@ -13,7 +13,6 @@ class ShowMoodView: UIViewController {
     
     @IBOutlet weak var reasonsLabel: UILabel!
     @IBOutlet weak var sleepLabel: UILabel!
-    @IBOutlet weak var anxiousLabel: UILabel!
     @IBOutlet weak var angryLabel: UILabel!
     @IBOutlet weak var excitedLabel: UILabel!
     @IBOutlet weak var sadLabel: UILabel!
@@ -22,6 +21,65 @@ class ShowMoodView: UIViewController {
     var mood: NSManagedObject? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
+         // sad/joyful
+         if mood!.value(forKey: "sad") as? String  == "1"{
+             self.reasonsLabel.text = "very sad"
+         }
+         if mood!.value(forKey: "sad") as? String  == "2"{
+            self.reasonsLabel.text = "a little sad"
+         }
+         if mood!.value(forKey: "sad") as? String  == "3"{
+            self.reasonsLabel.text = "a little joyful"
+         }
+         if mood!.value(forKey: "sad") as? String  == "4"{
+            self.reasonsLabel.text = "very joyful"
+         }
+         
+         // angry/peaceful
+         if mood!.value(forKey: "angry") as? String  == "1"{
+            self.reasonsLabel.text = "very angry"
+         }
+         if mood!.value(forKey: "angry") as? String  == "2"{
+            self.reasonsLabel.text = "a little angry"
+         }
+         if mood!.value(forKey: "angry") as? String  == "3"{
+            self.reasonsLabel.text = "a little peaceful"
+         }
+         if mood!.value(forKey: "angry") as? String  == "4"{
+            self.reasonsLabel.text = "very peaceful"
+         }
+         
+         // anxious/confident
+         if mood!.value(forKey: "happy") as? String  == "1"{
+            self.reasonsLabel.text = "very anxious"
+         }
+         if mood!.value(forKey: "happy") as? String  == "2"{
+            self.reasonsLabel.text = "a little anxious"
+         }
+         if mood!.value(forKey: "happy") as? String  == "3"{
+            self.reasonsLabel.text = "a little confident"
+         }
+         if mood!.value(forKey: "happy") as? String  == "4"{
+            self.reasonsLabel.text = "very confident"
+         }
+         
+         // tired/energetic
+         
+         if mood!.value(forKey: "excited") as? String  == "1"{
+         self.reasonsLabel.text = "very tired"
+         }
+         if mood!.value(forKey: "excited") as? String  == "2"{
+         self.reasonsLabel.text = "a little tired"
+         }
+         if mood!.value(forKey: "excited") as? String  == "3"{
+         self.reasonsLabel.text = "a little energetic"
+         }
+         if mood!.value(forKey: "excited") as? String  == "4"{
+         self.reasonsLabel.text = "very energetic"
+         }
+         
+        // probably don't need this stuff but thought i'd go ahead and keep it
         //self.reasonsLabel.text = mood!.value(forKey: "reasons") as? String
         //self.excitedLabel.text = mood!.value(forKey: "excited") as? String
         //self.happyLabel.text = mood!.value(forKey: "happy") as? String
@@ -31,6 +89,7 @@ class ShowMoodView: UIViewController {
         //self.sleepLabel.text = mood!.value(forKey: "sleep") as? String
 
         // Do any additional setup after loading the view.
+    */
     }
 
     override func didReceiveMemoryWarning() {

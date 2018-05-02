@@ -137,19 +137,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ9-7M-4zP" userLabel="TrustDisgust Slidebar">
                                 <rect key="frame" x="44" y="224" width="287" height="31"/>
                                 <connections>
                                     <action selector="happySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hg4-6T-nyS"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI1-bj-kxr" userLabel="FearAnger Slidebar">
                                 <rect key="frame" x="44" y="142" width="287" height="31"/>
                                 <connections>
                                     <action selector="sadSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="YLg-Hq-pQs"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-MI-nZj" userLabel="AnticipationSurprise Slidebar">
                                 <rect key="frame" x="44" y="335" width="287" height="31"/>
                                 <connections>
                                     <action selector="angrySlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="RRT-S8-koq"/>
@@ -165,7 +165,7 @@
                                     <action selector="saveButton:" destination="8jO-6n-XkQ" eventType="touchUpInside" id="2uW-9E-4Sf"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-10" maxValue="10" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="1" maxValue="4" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx2-u6-YlJ" userLabel="JoySadness Slidebar">
                                 <rect key="frame" x="44" y="408" width="287" height="31"/>
                                 <connections>
                                     <action selector="excitedSlider:" destination="8jO-6n-XkQ" eventType="valueChanged" id="Hnl-nN-J4K"/>

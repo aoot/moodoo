@@ -101,7 +101,7 @@
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="k2A-lc-uQr" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
                                         <rect key="frame" x="0.0" y="95.5" width="375" height="304.5"/>
-                                        <color key="backgroundColor" red="1" green="0.72253344769393757" blue="0.1958357517413859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.74901960779999999" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BYr-sk-yny">
                                             <size key="itemSize" width="73" height="79"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
