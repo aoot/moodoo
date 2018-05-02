@@ -6,8 +6,11 @@
 //  Copyright © 2018 Group6. All rights reserved.
 //
 
-import UIKit
+// TODO:
+// - Find a better solution for the logout button --> tabBarController is giving a warning in the console
+//  - Trying to see if present VC can work
 
+import UIKit
 
 class SettingsViewController: UIViewController {
 
@@ -21,7 +24,6 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Settings"
     }
@@ -32,7 +34,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func btnDeleteData(_ sender:Any) {
-        
         self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
         
         // cancel deletion

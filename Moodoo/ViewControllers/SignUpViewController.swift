@@ -6,12 +6,23 @@
 //  Copyright © 2018 Group6. All rights reserved.
 //
 
+// TODO: - List of stuff needed (High priority)
+// o Update signup page design and remove username textfield
+// o Hash the password textfield in the signup page
+// o Set up password retrieval email
+// o Remove username parameter - and use email as username instead --> Michael?
+// - Setup Firebase user authentication
+//  - Then pass it to Michael to update the coredata user information
+
+// BUG: - Unknown class TabBarControll in IB file
+// Happens after creating user and segueing into the tabBarController, maybe this is why the tabBar icons are not showing up.
+
 import UIKit
 import Firebase
 
 class SignUpViewController: UIViewController {
     
-    var txtNewUsername: UITextField!    // TODO: Replace username with just email
+    var txtNewUsername: UITextField!
     @IBOutlet weak var txtNewPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var txtNewEmail: UITextField!
@@ -41,21 +52,12 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func btnCancel(_ sender: UIButton) {
+        // Cancels signup and goes back to login page
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnCreateAccount(_ sender: Any) {
-        
-        // TODO: - List of stuff needed (High priority)
-        // o Update signup page design and remove username textfield
-        // o Hash the password textfield in the signup page
-        // o Set up password retrieval email
-        // o Remove username parameter - and use email as username instead --> Michael?
-        // - Setup Firebase user authentication
-        //  - Then pass it to Michael to update the coredata user information
-        
         // TODO: - Refactor this crazy nested if/else
-
         if (txtNewUsername.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "" || txtNewEmail.text == "") {
             self.alertController = UIAlertController(title: "Validation Error", message: "All fields are required", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
@@ -104,10 +106,6 @@ class SignUpViewController: UIViewController {
         }
     }
 }
-
-// BUG: - Unknown class TabBarControll in IB file
-// Happens after creating user and segueing into the tabBarController, maybe this is why the tabBar icons are not showing up.
-
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
