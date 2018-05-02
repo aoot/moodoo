@@ -51,7 +51,12 @@ class SignUpViewController: UIViewController {
         //  - Then pass it to Michael to update the coredata user information
         
         Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
-            print("\(user!.email!) created")
+            if user != nil {
+                print("\(user!.email!) created")
+            } else {
+                print(error!)
+                // Apparently if your password is too weak, it will not create the user
+            }
         }
     }
 }
