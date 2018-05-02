@@ -9,6 +9,7 @@
 // TODO:
 // - Find a better solution for the logout button --> tabBarController is giving a warning in the console
 //  - Trying to see if present VC can work
+// - Set constraints
 
 import UIKit
 
