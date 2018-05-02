@@ -11,12 +11,10 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var excitedLabel: UILabel!
     @IBOutlet weak var excitedValue: UISlider!
     
     @IBAction func excitedSlider(_ sender: UISlider) {
         sender.value = roundf(sender.value)
-        excitedLabel.text = String(roundf(sender.value))
     }
     
     @IBOutlet weak var happyValue: UISlider!

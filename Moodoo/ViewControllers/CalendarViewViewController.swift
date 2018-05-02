@@ -21,17 +21,51 @@ class CalendarViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        calendarView.scrollToDate(Date.init())
+        calendarView.visibleDates {visibleDates in
+            self.SetUpViewsOfCalendar(from: visibleDates)
+        }
+    }
+    func handleCellSelected(view: JTAppleCell?, cellState: CellState){
+        guard let validCell = view as? CustomCell else { return }
+        if validCell.isSelected {
+           performSegue(withIdentifier: "showMoodSegue", sender: nil)
+            
+            // match with mood in persistent service (worry about this later). *** programtically define segueway (look at tableview controller stuff) ***
+            validCell.selectedView.isHidden = false
+        }
+        else{
+            validCell.selectedView.isHidden = true
+        }
+    }
+    
+    func handleCellTextcolor(view: JTAppleCell?, cellState: CellState) {
+        guard let validCell = view as? CustomCell else {return}
+        // color days in the month white, outside of month gray
+        if cellState.dateBelongsTo == .thisMonth{
+            validCell.dateLabel.textColor! = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+        else{
+            validCell.dateLabel.textColor! = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        }
+    }
+    func setupCalendarView(){
+        calendarView.minimumLineSpacing = 0
+        calendarView.minimumInteritemSpacing = 0
     }
 
-    func setupCalendarView(){
-        //calendarView.minimumLineSpacing = 0
-        //calendarView.minimumInteritemSpacing = 0
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func SetUpViewsOfCalendar(from visibleDates: DateSegmentInfo){
+        let date = visibleDates.monthDates.first!.date
+        self.formatter.dateFormat = "yyyy"
+        self.year.text = self.formatter.string(from:date)
+        self.formatter.dateFormat = "MMMM"
+        self.month.text = self.formatter.string(from:date)
+    }
 
     /*
     // MARK: - Navigation
@@ -48,14 +82,12 @@ class CalendarViewViewController: UIViewController {
 extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
 
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-
-        
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
        
-        let finalStartDate = formatter.date(from: "2018 01 01")!
-        let endDate = formatter.date(from: "2018 12 31")!
+        let finalStartDate = formatter.date(from: "2016 01 01")!
+        let endDate = formatter.date(from: "2199 12 31")!
         
         let parameters = ConfigurationParameters(startDate: finalStartDate, endDate: endDate)
         return parameters
@@ -69,9 +101,13 @@ extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
 
 extension CalendarViewViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+       
         // display the cell
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.dateLabel.text = cellState.text
+
+        handleCellTextcolor(view: cell, cellState: cellState)
+
         
        // if cellState.isSelected {
          //   cell.selectedView.isHidden = false
@@ -83,24 +119,21 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        guard let validCell = cell as? CustomCell else {return}
-         //show visibility of selected view
-        validCell.selectedView.isHidden = false
+        handleCellSelected(view: cell, cellState: cellState)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
         formatter.dateFormat = "yyyy"
         year.text = formatter.string(from:date)
-        
         formatter.dateFormat = "MMMM"
         month.text = formatter.string(from:date)
     }
     
-    //func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-      //  guard let validCell = cell as? CustomCell else {return}
-         //show visibility of selected view
-        //validCell.selectedView.isHidden = true
-    //}
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        handleCellSelected(view: cell, cellState: cellState)
+    }
+    
+
 
 }
