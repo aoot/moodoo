@@ -12,7 +12,7 @@ import Firebase
 class LoginViewController: UIViewController {
 
     
-    @IBOutlet weak var txtUsername: UITextField!    // Username input field
+    @IBOutlet weak var txtEmail: UITextField!    // Username input field
     @IBOutlet weak var txtPassword: UITextField!    // Password input field
     
     private var alertController:UIAlertController?
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         // Secure text entry for password
         txtPassword.isSecureTextEntry = true
         
-        txtUsername.delegate = self
+        txtEmail.delegate = self
         txtPassword.delegate = self
         
         assignbackground()
@@ -52,10 +52,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        Auth.auth().signIn(withEmail: txtUsername.text!, password: txtPassword.text!) { (user, error) in   // TODO: - Change username to email
+        Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in   // TODO: - Change username to email
             if user != nil {
                 // TODO: - remove after firebase
-                PersistenceService.shared.setCurrentUser(username: self.txtUsername.text!)
+                PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
                 
                 print("\(user!.email!) signed in")
             } else {
@@ -70,14 +70,14 @@ class LoginViewController: UIViewController {
         }
         
         
-        //        if txtUsername.text == "" || txtPassword.text == "" {
+        //        if txtEmail.text == "" || txtPassword.text == "" {
 //            self.alertController = UIAlertController(title: "Invalid Login", message: "Please enter both Username and Password", preferredStyle: UIAlertControllerStyle.alert)
 //            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
 //            self.alertController!.addAction(OKAction)
 //            self.present(self.alertController!, animated:true, completion:nil)
 //        }
 //        else {
-//            let user = PersistenceService.shared.getUser(name: txtUsername.text!)
+//            let user = PersistenceService.shared.getUser(name: txtEmail.text!)
 //            
 //            if user.username == "<bad>" {
 //                self.alertController = UIAlertController(title: "Invalid Login", message: "Username not recognized", preferredStyle: UIAlertControllerStyle.alert)
@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
 //                }
 //                else {
 //                    // THEN YOU CAN FINALLY LOG IN
-//                    PersistenceService.shared.setCurrentUser(username: txtUsername.text!)
+//                    PersistenceService.shared.setCurrentUser(username: txtEmail.text!)
 //                }
 //            }
 //        }

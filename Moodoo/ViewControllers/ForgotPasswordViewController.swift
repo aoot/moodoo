@@ -21,6 +21,8 @@ class ForgotPasswordViewController: UIViewController {
         txtUsername.delegate = self
         txtEmail.delegate = self
         txtNewPassword.delegate = self
+        
+        self.txtUsername = self.txtEmail   // OVERRIDE: - Force username to be the same as email
     }
 
     override func didReceiveMemoryWarning() {

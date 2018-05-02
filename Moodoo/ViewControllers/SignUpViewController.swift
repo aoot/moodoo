@@ -31,6 +31,8 @@ class SignUpViewController: UIViewController {
         txtNewPassword.delegate = self
         txtConfirmPassword.delegate = self
         txtNewEmail.delegate = self
+
+        self.txtNewUsername = self.txtNewEmail   // OVERRIDE: - Force username to be the same as email
         
         self.navigationItem.title = "New Account"
     }
@@ -78,16 +80,17 @@ class SignUpViewController: UIViewController {
         
         Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
             if user != nil {
-                // Saving to local persistence service until firebase is fully implemented // TODO: - remove persistence after firebase
+                
+                // TODO: - remove persistence after firebase
                 PersistenceService.shared.saveUser(username: self.txtNewUsername.text!, password: self.txtNewPassword.text!, email: self.txtNewEmail.text!, moodCount: 0)
                 
                 print("\(user!.email!) created")
             } else {
                 // BUG: - Alert won't show, sigabrt
-                let alertController = UIAlertController(title: "Something is Wrong!", message: (error! as! String), preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
+                // let alertController = UIAlertController(title: "Something is Wrong!", message: (error! as! String), preferredStyle: .alert)
+                // let defaultAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+                // alertController.addAction(defaultAction)
+                // self.present(alertController, animated: true, completion: nil)
                 
                 print(error!)
                 // Apparently if your password is too weak, it will not create the user
