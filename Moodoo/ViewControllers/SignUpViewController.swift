@@ -54,12 +54,21 @@ class SignUpViewController: UIViewController {
             if user != nil {
                 print("\(user!.email!) created")
             } else {
+                // BUG: - Alert won't show, sigabrt
+                let alertController = UIAlertController(title: "Something is Wrong!", message: (error! as! String), preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                
                 print(error!)
                 // Apparently if your password is too weak, it will not create the user
             }
         }
     }
 }
+
+// BUG: - Unknown class TabBarControll in IB file
+// Happens after creating user and segueing into the tabBarController, maybe this is why the tabBar icons are not showing up.
 
 extension SignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
