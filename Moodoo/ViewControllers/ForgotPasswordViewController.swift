@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ForgotPasswordViewController: UIViewController {
     
@@ -17,7 +18,6 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        txtUsername.delegate = self
         txtEmail.delegate = self
         txtNewPassword.delegate = self
         
@@ -33,6 +33,13 @@ class ForgotPasswordViewController: UIViewController {
     @IBAction func btnSendEmail(_ sender: Any) {
         // SEND EMAIL
         // ALERT IF SUCCESSFUL OR NOT
+        Auth.auth().sendPasswordReset(withEmail: txtEmail.text!) { (error) in
+            if error != nil {
+                print(error!)
+            } else {
+                print("No errors, email should be sent.")
+            }
+        }
     }
     
     @IBAction func btnConfirm(_ sender: Any) {
