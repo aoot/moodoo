@@ -21,6 +21,7 @@ class CalendarViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
+        calendarView.scrollToDate(Date.init())
         calendarView.visibleDates {visibleDates in
             self.SetUpViewsOfCalendar(from: visibleDates)
         }
