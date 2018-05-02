@@ -22,13 +22,13 @@ class ShowMoodView: UIViewController {
     var mood: NSManagedObject? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.reasonsLabel.text = mood!.value(forKey: "reasons") as? String
-        self.excitedLabel.text = mood!.value(forKey: "excited") as? String
-        self.happyLabel.text = mood!.value(forKey: "happy") as? String
-        self.sadLabel.text = mood!.value(forKey: "sad") as? String
-        self.angryLabel.text = mood!.value(forKey: "angry") as? String
-        self.anxiousLabel.text = mood!.value(forKey: "anxious") as? String
-        self.sleepLabel.text = mood!.value(forKey: "sleep") as? String
+        //self.reasonsLabel.text = mood!.value(forKey: "reasons") as? String
+        //self.excitedLabel.text = mood!.value(forKey: "excited") as? String
+        //self.happyLabel.text = mood!.value(forKey: "happy") as? String
+        //self.sadLabel.text = mood!.value(forKey: "sad") as? String
+        //self.angryLabel.text = mood!.value(forKey: "angry") as? String
+        //self.anxiousLabel.text = mood!.value(forKey: "anxious") as? String
+        //self.sleepLabel.text = mood!.value(forKey: "sleep") as? String
 
         // Do any additional setup after loading the view.
     }
