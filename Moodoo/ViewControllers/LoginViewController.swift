@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         
         assignbackground()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
                 // TODO: - remove after firebase
                 PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
                 // TODO: - remove segue from button into if else statement
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+//                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
                 print("\(user!.email!) signed in")
             } else {
                 // BUG: - Alert won't show, sigabrt
