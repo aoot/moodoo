@@ -12,7 +12,8 @@ import CoreData
 class PersistenceService {
     
     private init() {
-        saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu", moodCount: 0)
+        // Hard coded account for testing
+        saveUser(username: "tony", password: "ant", email: "anthonyylee@utexas.edu", moodCount: 0)
     }
     
     static let shared = PersistenceService()

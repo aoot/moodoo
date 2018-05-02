@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
 
@@ -51,34 +52,41 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLogin(_ sender: Any) {
-        if txtUsername.text == "" || txtPassword.text == "" {
-            self.alertController = UIAlertController(title: "Invalid Login", message: "Please enter both Username and Password", preferredStyle: UIAlertControllerStyle.alert)
-            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-            self.alertController!.addAction(OKAction)
-            self.present(self.alertController!, animated:true, completion:nil)
+        Auth.auth().signIn(withEmail: txtUsername.text!, password: txtPassword.text!) { (user, error) in   // TODO: - Change username to email
+            if user != nil {
+                
+            } else {}
         }
-        else {
-            let user = PersistenceService.shared.getUser(name: txtUsername.text!)
-            
-            if user.username == "<bad>" {
-                self.alertController = UIAlertController(title: "Invalid Login", message: "Username not recognized", preferredStyle: UIAlertControllerStyle.alert)
-                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-                self.alertController!.addAction(OKAction)
-                self.present(self.alertController!, animated:true, completion:nil)
-            }
-            else {
-                if user.password != txtPassword.text {
-                    self.alertController = UIAlertController(title: "Invalid Login", message: "Password does not match our records", preferredStyle: UIAlertControllerStyle.alert)
-                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-                    self.alertController!.addAction(OKAction)
-                    self.present(self.alertController!, animated:true, completion:nil)
-                }
-                else {
-                    // THEN YOU CAN FINALLY LOG IN
-                    PersistenceService.shared.setCurrentUser(username: txtUsername.text!)
-                }
-            }
-        }
+        
+        
+        //        if txtUsername.text == "" || txtPassword.text == "" {
+//            self.alertController = UIAlertController(title: "Invalid Login", message: "Please enter both Username and Password", preferredStyle: UIAlertControllerStyle.alert)
+//            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//            self.alertController!.addAction(OKAction)
+//            self.present(self.alertController!, animated:true, completion:nil)
+//        }
+//        else {
+//            let user = PersistenceService.shared.getUser(name: txtUsername.text!)
+//            
+//            if user.username == "<bad>" {
+//                self.alertController = UIAlertController(title: "Invalid Login", message: "Username not recognized", preferredStyle: UIAlertControllerStyle.alert)
+//                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//                self.alertController!.addAction(OKAction)
+//                self.present(self.alertController!, animated:true, completion:nil)
+//            }
+//            else {
+//                if user.password != txtPassword.text {
+//                    self.alertController = UIAlertController(title: "Invalid Login", message: "Password does not match our records", preferredStyle: UIAlertControllerStyle.alert)
+//                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//                    self.alertController!.addAction(OKAction)
+//                    self.present(self.alertController!, animated:true, completion:nil)
+//                }
+//                else {
+//                    // THEN YOU CAN FINALLY LOG IN
+//                    PersistenceService.shared.setCurrentUser(username: txtUsername.text!)
+//                }
+//            }
+//        }
     }
     
     /*
