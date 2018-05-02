@@ -50,8 +50,37 @@ class SignUpViewController: UIViewController {
         // - Setup Firebase user authentication
         //  - Then pass it to Michael to update the coredata user information
         
+//        if (txtNewUsername.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "" || txtNewEmail.text == "") {
+//            self.alertController = UIAlertController(title: "Validation Error", message: "All fields are required", preferredStyle: UIAlertControllerStyle.alert)
+//            let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//            self.alertController!.addAction(OKAction)
+//            self.present(self.alertController!, animated:true, completion:nil)
+//        }
+//        else {
+//            if txtNewPassword.text != txtConfirmPassword.text {
+//                self.alertController = UIAlertController(title: "Validation Error", message: "Passwords do not match", preferredStyle: UIAlertControllerStyle.alert)
+//                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//                self.alertController!.addAction(OKAction)
+//                self.present(self.alertController!, animated:true, completion:nil)
+//            }
+//            else {
+//
+//                let user = PersistenceService.shared.getUser(name: txtNewUsername.text!)
+//
+//                if user.username != "<bad>" {
+//                    self.alertController = UIAlertController(title: "Validation Error", message: "Username taken - please try another one", preferredStyle: UIAlertControllerStyle.alert)
+//                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+//                    self.alertController!.addAction(OKAction)
+//                    self.present(self.alertController!, animated:true, completion:nil)
+//                }
+//                else {
+//                    PersistenceService.shared.saveUser(username: txtNewUsername.text!, password: txtNewPassword.text!, email: txtNewEmail.text!, moodCount: 0)
+        
         Auth.auth().createUser(withEmail: txtNewEmail.text!, password: txtNewPassword.text!) { (user, error) in
             if user != nil {
+                // Saving to local persistence service until firebase is fully implemented // TODO: - remove persistence after firebase
+                PersistenceService.shared.saveUser(username: self.txtNewUsername.text!, password: self.txtNewPassword.text!, email: self.txtNewEmail.text!, moodCount: 0)
+                
                 print("\(user!.email!) created")
             } else {
                 // BUG: - Alert won't show, sigabrt

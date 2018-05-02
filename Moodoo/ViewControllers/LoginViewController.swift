@@ -54,8 +54,19 @@ class LoginViewController: UIViewController {
     @IBAction func btnLogin(_ sender: Any) {
         Auth.auth().signIn(withEmail: txtUsername.text!, password: txtPassword.text!) { (user, error) in   // TODO: - Change username to email
             if user != nil {
+                // TODO: - remove after firebase
+                PersistenceService.shared.setCurrentUser(username: self.txtUsername.text!)
                 
-            } else {}
+                print("\(user!.email!) signed in")
+            } else {
+                // BUG: - Alert won't show, sigabrt
+//                let alertController = UIAlertController(title: "Something is Wrong!", message: (error!), preferredStyle: .alert)
+//                let defaultAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+//                alertController.addAction(defaultAction)
+//                self.present(alertController, animated: true, completion: nil)
+                
+                print(error!)
+            }
         }
         
         
