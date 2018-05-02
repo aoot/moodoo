@@ -10,16 +10,21 @@ import Foundation
 import CoreData
 
 class PersistenceService {
+    // Custom declared PersistenceService class -
+    // It is used to store user information locally on the device.
     
     private init() {
-        //saveUser(username: "tony", password: "tonypw", email: "anthonyylee@utexas.edu", moodCount: 0)
+        // Hard coded account for testing
+        saveUser(username: "anthonyylee@utexas.edu",
+                 password: "anthony",
+                 email: "anthonyylee@utexas.edu",
+                 moodCount: 0)
     }
     
-    static let shared = PersistenceService()
-    
+    static let shared = PersistenceService()  // Singleton instance, class level varaible
     private var users: [NSManagedObject] = [NSManagedObject]()
     private var moods: [NSManagedObject] = [NSManagedObject]()
-    private var currentUser: AppUser?
+    private var currentUser: AppUser?         // private - Restricts the use to enclosing declaration
     
     func setCurrentUser(username: String) {
         currentUser = getUser(name: username)
@@ -87,7 +92,6 @@ class PersistenceService {
 extension PersistenceService {
     
     func fetchUsers() {
-        
         let managedContext = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"User")
         var fetchedResults:[NSManagedObject]? = nil
@@ -105,7 +109,6 @@ extension PersistenceService {
     }
     
     func saveUser(username:String, password:String, email:String, moodCount:Int) {
-        
         let managedContext = persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName:"User", in:managedContext)
         let user = NSManagedObject(entity: entity!, insertInto:managedContext)
@@ -118,6 +121,7 @@ extension PersistenceService {
         do {
             try managedContext.save()
             users.append(user)
+//            setCurrentUser(username: username) // Sets current user when saving to core data
         } catch {
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
@@ -147,7 +151,6 @@ extension PersistenceService {
 extension PersistenceService {
     
     func fetchMoods() {
-        
         let managedContext = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Mood")
         fetchRequest.predicate = NSPredicate(format: "user == %@", currentUser!.username)
@@ -166,7 +169,6 @@ extension PersistenceService {
     }
     
     func saveMood(angry:String, happy:String, excited:String, sad: String, sleep: String, reasons: String, date: String) {
-        
         let managedContext = persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName:"Mood", in:managedContext)
         let mood = NSManagedObject(entity: entity!, insertInto:managedContext)
@@ -178,7 +180,7 @@ extension PersistenceService {
         mood.setValue(sleep, forKey: "sleep")
         mood.setValue(reasons, forKey: "reasons")
         mood.setValue(date, forKey: "date")
-        mood.setValue(currentUser!.username, forKey:"user")
+        mood.setValue(currentUser!.username, forKey:"user")  // Keep finding nil
         
         do {
             try managedContext.save()
@@ -216,7 +218,6 @@ extension PersistenceService {
     }
     
     func deleteAllMoods() {
-        
         let managedContext = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Mood")
         fetchRequest.predicate = NSPredicate(format: "user == %@", currentUser!.username)

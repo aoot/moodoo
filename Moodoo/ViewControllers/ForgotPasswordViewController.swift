@@ -10,8 +10,7 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
     
-    
-    @IBOutlet weak var txtUsername: UITextField!
+    var txtUsername: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtNewPassword: UITextField!
     
@@ -21,6 +20,8 @@ class ForgotPasswordViewController: UIViewController {
         txtUsername.delegate = self
         txtEmail.delegate = self
         txtNewPassword.delegate = self
+        
+        self.txtUsername = self.txtEmail   // OVERRIDE: - Force username to be the same as email
     }
 
     override func didReceiveMemoryWarning() {

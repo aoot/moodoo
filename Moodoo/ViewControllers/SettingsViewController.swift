@@ -15,6 +15,8 @@ class SettingsViewController: UIViewController {
     
     @IBAction func logOutButton(_ sender: Any) {
         self.tabBarController?.tabBar.isHidden = true
+//        let vc: LoginViewController = LoginViewController()
+//        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
