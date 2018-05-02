@@ -6,6 +6,9 @@
 //  Copyright © 2018 Natascha Brauchle. All rights reserved.
 //
 
+// TODO:
+// - The tab icons are not showing up, see error msg in console
+
 import UIKit
 
 class TabBarController: UITabBarController {
