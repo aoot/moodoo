@@ -281,25 +281,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-Da-8Ix">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-Da-8Ix">
                                 <rect key="frame" x="40" y="236" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnP-Fb-C97">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VnP-Fb-C97">
                                 <rect key="frame" x="40" y="267" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INB-d9-vGv">
-                                <rect key="frame" x="40" y="418" width="124" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-ck-bOk">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXA-ck-bOk">
                                 <rect key="frame" x="130" y="317" width="116" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Send Email"/>
@@ -307,21 +301,7 @@
                                     <action selector="btnSendEmail:" destination="wA4-Aw-Etc" eventType="touchUpInside" id="9Y0-mo-Wqz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gD-t5-cMw">
-                                <rect key="frame" x="40" y="450" width="295" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEW-ut-04i">
-                                <rect key="frame" x="146" y="500" width="84" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Confirm"/>
-                                <connections>
-                                    <action selector="btnConfirm:" destination="wA4-Aw-Etc" eventType="touchUpInside" id="Cgf-hF-Uw4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-PC-JPO">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRx-PC-JPO">
                                 <rect key="frame" x="157" y="611" width="61" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel"/>
@@ -333,29 +313,19 @@
                         <color key="backgroundColor" red="0.96421045059999999" green="0.61406230930000005" blue="0.23521524669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="zRx-PC-JPO" secondAttribute="bottom" constant="20" symbolic="YES" id="2BJ-M8-o2S"/>
-                            <constraint firstItem="6gD-t5-cMw" firstAttribute="centerX" secondItem="eEW-ut-04i" secondAttribute="centerX" id="55T-pW-v7i"/>
-                            <constraint firstItem="VnP-Fb-C97" firstAttribute="leading" secondItem="INB-d9-vGv" secondAttribute="leading" id="8W4-1h-XCa"/>
-                            <constraint firstItem="eEW-ut-04i" firstAttribute="top" secondItem="6gD-t5-cMw" secondAttribute="bottom" constant="20" id="9BN-IE-s3x"/>
                             <constraint firstItem="JGd-Da-8Ix" firstAttribute="leading" secondItem="VnP-Fb-C97" secondAttribute="leading" id="E6v-yf-bvJ"/>
-                            <constraint firstItem="INB-d9-vGv" firstAttribute="top" secondItem="WXA-ck-bOk" secondAttribute="bottom" constant="60" id="Iar-WN-rvG"/>
                             <constraint firstItem="VnP-Fb-C97" firstAttribute="centerX" secondItem="WXA-ck-bOk" secondAttribute="centerX" id="Lus-Xd-RYg"/>
-                            <constraint firstItem="INB-d9-vGv" firstAttribute="leading" secondItem="6gD-t5-cMw" secondAttribute="leading" id="NQ6-Di-IVe"/>
                             <constraint firstItem="yjr-Dx-j6K" firstAttribute="top" secondItem="eOS-wh-dw6" secondAttribute="top" constant="32" id="Nrr-KM-MKd"/>
-                            <constraint firstItem="VnP-Fb-C97" firstAttribute="trailing" secondItem="6gD-t5-cMw" secondAttribute="trailing" id="Pqf-vS-Uxy"/>
                             <constraint firstItem="JGd-Da-8Ix" firstAttribute="leading" secondItem="eOS-wh-dw6" secondAttribute="leading" constant="40" id="Tdd-ak-Y0a"/>
                             <constraint firstItem="yjr-Dx-j6K" firstAttribute="centerX" secondItem="VnP-Fb-C97" secondAttribute="centerX" id="Ug1-hF-nOX"/>
-                            <constraint firstItem="zRx-PC-JPO" firstAttribute="top" secondItem="eEW-ut-04i" secondAttribute="bottom" constant="70" id="X5l-4r-Mhe"/>
                             <constraint firstItem="yjr-Dx-j6K" firstAttribute="centerX" secondItem="OHU-lI-d9F" secondAttribute="centerX" id="cYS-cm-kUo"/>
                             <constraint firstItem="VnP-Fb-C97" firstAttribute="top" secondItem="JGd-Da-8Ix" secondAttribute="bottom" constant="10" id="g79-NR-SMN"/>
                             <constraint firstItem="WXA-ck-bOk" firstAttribute="top" secondItem="VnP-Fb-C97" secondAttribute="bottom" constant="20" id="gO2-p3-Vic"/>
-                            <constraint firstItem="6gD-t5-cMw" firstAttribute="top" secondItem="INB-d9-vGv" secondAttribute="bottom" constant="10" id="knB-ED-84u"/>
-                            <constraint firstItem="eEW-ut-04i" firstAttribute="centerX" secondItem="zRx-PC-JPO" secondAttribute="centerX" id="we8-Ai-1Oa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOS-wh-dw6"/>
                     </view>
                     <connections>
                         <outlet property="txtEmail" destination="VnP-Fb-C97" id="smb-re-ghf"/>
-                        <outlet property="txtNewPassword" destination="6gD-t5-cMw" id="adI-om-As3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfX-Th-BlN" userLabel="First Responder" sceneMemberID="firstResponder"/>

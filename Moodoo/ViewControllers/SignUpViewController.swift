@@ -47,9 +47,9 @@ class SignUpViewController: UIViewController {
     @IBAction func btnCreateAccount(_ sender: Any) {
         
         // TODO: - List of stuff needed (High priority)
-        // - Update signup page design and remove username textfield
+        // o Update signup page design and remove username textfield
         // o Hash the password textfield in the signup page
-        // - Set up password retrieval email
+        // o Set up password retrieval email
         // o Remove username parameter - and use email as username instead --> Michael?
         // - Setup Firebase user authentication
         //  - Then pass it to Michael to update the coredata user information

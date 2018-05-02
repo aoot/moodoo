@@ -13,13 +13,11 @@ class ForgotPasswordViewController: UIViewController {
     
     var txtUsername: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
-    @IBOutlet weak var txtNewPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         txtEmail.delegate = self
-        txtNewPassword.delegate = self
         
         self.txtUsername = self.txtEmail   // OVERRIDE: - Force username to be the same as email
     }
@@ -40,10 +38,6 @@ class ForgotPasswordViewController: UIViewController {
                 print("No errors, email should be sent.")
             }
         }
-    }
-    
-    @IBAction func btnConfirm(_ sender: Any) {
-        // USER ENTERS NEW PASSWORD FROM EMAIL
     }
     
     @IBAction func btnCancel(_ sender: Any) {
