@@ -12,11 +12,14 @@
 // - Set constraints
 
 import UIKit
+import CoreData
 
 class SettingsViewController: UIViewController {
 
     private var alertController:UIAlertController?
-    
+    var mood: UserMood?
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var moodsLoggedLabel: UILabel!
     @IBAction func logOutButton(_ sender: Any) {
         self.tabBarController?.tabBar.isHidden = true
 //        let vc: LoginViewController = LoginViewController()
@@ -27,6 +30,9 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Settings"
+        moodsLoggedLabel.text = String(PersistenceService.shared.getMoodCount())
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
