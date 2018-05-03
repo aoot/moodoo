@@ -238,6 +238,7 @@ extension PersistenceService {
             }
             
             try managedContext.save()
+            refreshData()
         } catch let error as NSError {
             print("Delete all data in Mood error : \(error) \(error.userInfo)")
         }
