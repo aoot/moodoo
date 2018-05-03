@@ -236,6 +236,8 @@ extension PersistenceService {
                 let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
                 managedContext.delete(managedObjectData)
             }
+            
+            try managedContext.save()
         } catch let error as NSError {
             print("Delete all data in Mood error : \(error) \(error.userInfo)")
         }
