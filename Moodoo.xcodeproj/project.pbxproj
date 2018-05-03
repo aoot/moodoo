@@ -157,9 +157,9 @@
 		E570F31A208C06290029098C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E570F322208C06EC0029098C /* SignUpViewController.swift */,
 				E570F321208C06EC0029098C /* LoginViewController.swift */,
 				E570F320208C06EC0029098C /* ForgotPasswordViewController.swift */,
-				E570F322208C06EC0029098C /* SignUpViewController.swift */,
 				E570F323208C06EC0029098C /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;

@@ -11,16 +11,14 @@ import Firebase
 import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController {
-    
     var txtUsername: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         txtEmail.delegate = self
-        
-        self.txtUsername = self.txtEmail   // OVERRIDE: - Force username to be the same as email
+        // OVERRIDE: - Force username to be the same as email
+        self.txtUsername = self.txtEmail
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,31 +26,15 @@ class ForgotPasswordViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func btnSendEmail(_ sender: Any) {
-        // SEND EMAIL
-        // ALERT IF SUCCESSFUL OR NOT
         Auth.auth().sendPasswordReset(withEmail: txtEmail.text!) { (error) in
-            if error != nil {
-                print(error!)
-            } else {
-                print("No errors, email should be sent.")
-            }
+            if error != nil {print(error!)} else {print("No errors, email should be sent.")}
         }
     }
     
     @IBAction func btnCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
-    /*
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ForgotPasswordViewController: UITextFieldDelegate {
