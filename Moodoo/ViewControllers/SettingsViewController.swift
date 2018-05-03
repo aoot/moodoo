@@ -13,6 +13,8 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
@@ -21,7 +23,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var moodsLoggedLabel: UILabel!
     @IBAction func logOutButton(_ sender: Any) {
-        self.tabBarController?.tabBar.isHidden = true
+        // use a firebase log out function
 //        let vc: LoginViewController = LoginViewController()
 //        self.present(vc, animated: true, completion: nil)
     }
