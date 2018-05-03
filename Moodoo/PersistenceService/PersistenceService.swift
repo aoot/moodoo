@@ -16,10 +16,10 @@ class PersistenceService {
     
     private init() {
         // Hard coded account for testing
-        saveUser(username: "anthonyylee@utexas.edu",
+        /*saveUser(username: "anthonyylee@utexas.edu",
                  password: "anthony",
                  email: "anthonyylee@utexas.edu",
-                 moodCount: 0)
+                 moodCount: 0)*/
     }
     
     static let shared = PersistenceService()  // Singleton instance, class level varaible
@@ -122,7 +122,7 @@ extension PersistenceService {
         do {
             try managedContext.save()
             users.append(user)
-//            setCurrentUser(username: username) // Sets current user when saving to core data
+            setCurrentUser(username: username) // Sets current user when saving to core data
         } catch {
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
