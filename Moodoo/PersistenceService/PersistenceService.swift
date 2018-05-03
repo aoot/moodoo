@@ -37,6 +37,7 @@ class PersistenceService {
         fetchMoods()
         setMoodCount()
         saveContext()
+        getMoodCount()
     }
     
     // MARK: - Core Data stack
