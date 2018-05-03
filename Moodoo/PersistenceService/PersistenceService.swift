@@ -146,7 +146,7 @@ extension PersistenceService {
     }
     
     func getUsername() -> String {
-        return (currentUser?.username)!
+        return currentUser!.username
     }
     
 }

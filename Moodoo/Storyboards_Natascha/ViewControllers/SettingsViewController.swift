@@ -13,34 +13,28 @@
 
 import UIKit
 import CoreData
-import Firebase
-import FirebaseAuth
 
 class SettingsViewController: UIViewController {
 
     private var alertController:UIAlertController?
-    var mood: UserMood?
+    
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var moodsLoggedLabel: UILabel!
     @IBAction func logOutButton(_ sender: Any) {
-        do
-        {
-            try Auth.auth().signOut()
-        }
-        catch let error as NSError
-        {
-            print (error.localizedDescription)
-        }
-        // use a firebase log out function
+        self.tabBarController?.tabBar.isHidden = true
 //        let vc: LoginViewController = LoginViewController()
 //        self.present(vc, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Settings"
+        var mood: UserMood?
         emailLabel.text = PersistenceService.shared.getUsername()
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Settings"
         moodsLoggedLabel.text = String(PersistenceService.shared.getMoodCount())
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,12 +44,19 @@ class SettingsViewController: UIViewController {
     
     @IBAction func btnDeleteData(_ sender:Any) {
         self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action:UIAlertAction) in print("Cancel Button Pressed 1")}
+        
+        // cancel deletion
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action:UIAlertAction) in
+            //print("Cancel Button Pressed 1");
+        }
         self.alertController!.addAction(cancelAction)
+        
+        // when you click OK
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in PersistenceService.shared.deleteAllMoods()}
         self.alertController!.addAction(OKAction)
         
         self.present(self.alertController!, animated:true, completion:nil)
+        
     }
     
     /*
@@ -65,20 +66,5 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-}
 
-extension SettingsViewController {
-    @IBAction func btnSEndEmail(_ sender: Any) {
-        // Reset password function
-        Auth.auth().sendPasswordReset(withEmail: emailLabel.text!) { (error) in
-            if error != nil {
-                print(error!)
-            } else {
-                self.alertController = UIAlertController(title: "Reset Password", message: "A password reset email has been sent. Please check your email.", preferredStyle: UIAlertControllerStyle.alert)
-                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-                self.alertController!.addAction(OKAction)
-                print("No errors, email should be sent.")
-            }
-        }
-    }
 }
