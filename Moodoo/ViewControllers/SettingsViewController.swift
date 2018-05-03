@@ -53,7 +53,9 @@ class SettingsViewController: UIViewController {
         self.alertController = UIAlertController(title: "Are you sure?", message: "This action cannot be undone", preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action:UIAlertAction) in print("Cancel Button Pressed 1")}
         self.alertController!.addAction(cancelAction)
-        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in PersistenceService.shared.deleteAllMoods()}
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in PersistenceService.shared.deleteAllMoods()
+            self.moodsLoggedLabel.text = "0"
+        }
         self.alertController!.addAction(OKAction)
         
         self.present(self.alertController!, animated:true, completion:nil)
