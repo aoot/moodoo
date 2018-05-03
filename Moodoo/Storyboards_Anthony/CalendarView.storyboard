@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,7 +101,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="CustomCell" id="lFW-6a-JAt" customClass="CustomCell" customModule="Moodoo" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="lFW-6a-JAt" customClass="CustomCell" customModule="Moodoo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="73" height="79"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -109,7 +109,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB2-Ve-Mua">
-                                                            <rect key="frame" x="15" y="30" width="42" height="21"/>
+                                                            <rect key="frame" x="15.5" y="28.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -126,24 +126,13 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="leading" secondItem="lFW-6a-JAt" secondAttribute="leadingMargin" id="00u-sN-VSM"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="top" secondItem="lFW-6a-JAt" secondAttribute="top" constant="20" id="0re-ln-8yN"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="leading" secondItem="lFW-6a-JAt" secondAttribute="leading" constant="16" id="0sc-aI-26D"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="centerX" secondItem="lFW-6a-JAt" secondAttribute="centerX" id="1i4-fw-6ZL"/>
                                                     <constraint firstItem="WzU-ls-C9n" firstAttribute="leading" secondItem="lFW-6a-JAt" secondAttribute="leading" constant="16" id="3ge-yd-4vu"/>
                                                     <constraint firstItem="eB2-Ve-Mua" firstAttribute="centerY" secondItem="lFW-6a-JAt" secondAttribute="centerY" id="80b-my-7Og"/>
-                                                    <constraint firstAttribute="bottom" secondItem="WzU-ls-C9n" secondAttribute="bottom" constant="19" id="8Bf-rl-llT"/>
                                                     <constraint firstItem="WzU-ls-C9n" firstAttribute="top" secondItem="lFW-6a-JAt" secondAttribute="topMargin" id="8g6-eF-zDc"/>
                                                     <constraint firstItem="eB2-Ve-Mua" firstAttribute="centerX" secondItem="lFW-6a-JAt" secondAttribute="centerX" id="ENB-4s-tca"/>
                                                     <constraint firstItem="WzU-ls-C9n" firstAttribute="centerY" secondItem="eB2-Ve-Mua" secondAttribute="centerY" id="J7R-9R-JaI"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="centerY" secondItem="lFW-6a-JAt" secondAttribute="centerY" id="Ja2-Lo-LFa"/>
                                                     <constraint firstItem="WzU-ls-C9n" firstAttribute="centerY" secondItem="lFW-6a-JAt" secondAttribute="centerY" id="KIm-jd-E6v"/>
-                                                    <constraint firstAttribute="bottomMargin" secondItem="WzU-ls-C9n" secondAttribute="bottom" constant="19" id="V7B-yE-5wf"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="WzU-ls-C9n" secondAttribute="trailing" constant="1" id="hAK-cL-92y"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="top" secondItem="lFW-6a-JAt" secondAttribute="top" constant="20" id="nqC-Vp-bhH"/>
                                                     <constraint firstItem="WzU-ls-C9n" firstAttribute="centerX" secondItem="lFW-6a-JAt" secondAttribute="centerX" id="o3t-h6-Mea"/>
-                                                    <constraint firstAttribute="trailing" secondItem="WzU-ls-C9n" secondAttribute="trailing" constant="17" id="qpR-vp-lZ5"/>
-                                                    <constraint firstItem="WzU-ls-C9n" firstAttribute="centerX" secondItem="eB2-Ve-Mua" secondAttribute="centerX" id="uVE-jy-Eio"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="eB2-Ve-Mua" id="GTP-7F-7Xt"/>

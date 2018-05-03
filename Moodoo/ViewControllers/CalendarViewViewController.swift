@@ -43,9 +43,6 @@ class CalendarViewViewController: UIViewController {
                 alertController.addAction(OKAction)
                 present(alertController, animated:true, completion:nil)
             }
-            
-            // match with mood in persistent service (worry about this later). *** programtically define segueway (look at tableview controller stuff) ***
-            validCell.selectedView.isHidden = false
         }
         else{
             validCell.selectedView.isHidden = true
