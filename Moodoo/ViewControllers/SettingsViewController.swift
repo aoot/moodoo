@@ -33,6 +33,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
+        PersistenceService.shared.refreshData()
         emailLabel.text = PersistenceService.shared.getUsername()
         moodsLoggedLabel.text = String(PersistenceService.shared.getMoodCount())
     }
