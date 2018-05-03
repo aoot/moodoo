@@ -57,6 +57,10 @@ class LoginViewController: UIViewController {
                         PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
                     }
                     
+                    if self.txtEmail.text == "anthonyylee@utexas.edu" {
+                        self.demoData(); // Creates demo data
+                        print("Demo data created")
+                    }
                     //Go to the HomeViewController if the login is sucessful
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "moodCapture")
                     self.present(vc!, animated: true, completion: nil)
@@ -102,3 +106,15 @@ extension LoginViewController {
     }
 }
 
+extension LoginViewController {
+    func demoData() {
+        PersistenceService.shared.saveMood(angry: "2.0", happy: "2.0", excited: "4.0", sad: "4.0", sleep: "2", reasons: "Tomorrow is SB2k18", date: "March 11, 2018")
+        PersistenceService.shared.saveMood(angry: "4.0", happy: "4.0", excited: "4.0", sad: "4.0", sleep: "0", reasons: "FLYING TO CABO", date: "March 12, 2018")
+        PersistenceService.shared.saveMood(angry: "2.0", happy: "4.0", excited: "4.0", sad: "4.0", sleep: "0", reasons: "HIDE", date: "March 13, 2018")
+        PersistenceService.shared.saveMood(angry: "1.0", happy: "4.0", excited: "4.0", sad: "4.0", sleep: "0", reasons: "Glitch mob", date: "March 14, 2018")
+        PersistenceService.shared.saveMood(angry: "3.0", happy: "2.0", excited: "4.0", sad: "4.0", sleep: "0", reasons: "Penthouse party", date: "March 15, 2018")
+        PersistenceService.shared.saveMood(angry: "4.0", happy: "2.0", excited: "3.0", sad: "3.0", sleep: "0", reasons: "RAVE", date: "March 16, 2018")
+        PersistenceService.shared.saveMood(angry: "2.0", happy: "1.0", excited: "1.0", sad: "1.0", sleep: "0", reasons: "Last day of SB", date: "March 17, 2018")
+        PersistenceService.shared.saveMood(angry: "4.0", happy: "3.0", excited: "2.0", sad: "1.0", sleep: "12", reasons: "Skipped classes, still tired!!!", date: "March 18, 2018")
+    }
+}
