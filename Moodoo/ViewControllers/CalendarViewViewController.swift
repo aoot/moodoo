@@ -59,15 +59,16 @@ class CalendarViewViewController: UIViewController {
         // color days in the month white, outside of month gray
         if cellState.dateBelongsTo == .thisMonth{
             validCell.dateLabel.textColor! = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-            if PersistenceService.shared.checkMoodForDay(date: validCell.date!) {
-                validCell.backgroundColor = UIColor.orange
-            }
-            else {
-                validCell.backgroundColor = #colorLiteral(red: 1, green: 0.7906726003, blue: 0.4334131479, alpha: 1)
-            }
         }
         else{
             validCell.dateLabel.textColor! = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
+        }
+        
+        if PersistenceService.shared.checkMoodForDay(date: validCell.date!) {
+            validCell.backgroundColor = UIColor.orange
+        }
+        else {
+            validCell.backgroundColor = #colorLiteral(red: 1, green: 0.7906726003, blue: 0.4334131479, alpha: 1)
         }
     }
     
