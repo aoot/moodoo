@@ -41,7 +41,7 @@
 		92DA54D3208E564C00575273 /* CalendarView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarView.storyboard; sourceTree = "<group>"; };
 		92DA54D8208E5B1F00575273 /* CalendarViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewViewController.swift; path = Moodoo/ViewControllers/CalendarViewViewController.swift; sourceTree = SOURCE_ROOT; };
 		92DA54DA208E5EE900575273 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		E54EE479208BFE1B00EC23F8 /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E54EE479208BFE1B00EC23F8 /* Moodoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Moodoo.app; path = "/Users/Anthony/Documents/Git/moodoo/build/Debug-iphoneos/Moodoo.app"; sourceTree = "<absolute>"; };
 		E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54EE481208BFE1B00EC23F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Mood.storyboard; sourceTree = "<group>"; };
 		E54EE484208BFE1B00EC23F8 /* Moodoo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moodoo.xcdatamodel; sourceTree = "<group>"; };
@@ -104,18 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				E54EE47B208BFE1B00EC23F8 /* Moodoo */,
-				E54EE47A208BFE1B00EC23F8 /* Products */,
 				5BA014C2DB630327C9E8F954 /* Pods */,
 				DFFE2DC5E54345026712EAA3 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		E54EE47A208BFE1B00EC23F8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E54EE479208BFE1B00EC23F8 /* Moodoo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E54EE47B208BFE1B00EC23F8 /* Moodoo */ = {
@@ -232,7 +223,7 @@
 				Base,
 			);
 			mainGroup = E54EE470208BFE1A00EC23F8;
-			productRefGroup = E54EE47A208BFE1B00EC23F8 /* Products */;
+			productRefGroup = E54EE470208BFE1A00EC23F8;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
