@@ -23,6 +23,14 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var moodsLoggedLabel: UILabel!
     @IBAction func logOutButton(_ sender: Any) {
+        do
+        {
+            try Auth.auth().signOut()
+        }
+        catch let error as NSError
+        {
+            print (error.localizedDescription)
+        }
         // use a firebase log out function
 //        let vc: LoginViewController = LoginViewController()
 //        self.present(vc, animated: true, completion: nil)
