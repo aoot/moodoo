@@ -68,7 +68,13 @@ class ViewController: UIViewController {
             reasonsStr = reasons.text!
         }
         
-        PersistenceService.shared.saveMood(angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleep: sleepStr, reasons: reasonsStr, date: dateStr)
+        PersistenceService.shared.saveMood(angry: String(roundf(angryValue.value)),
+                                           happy: String(roundf(happyValue.value)),
+                                           excited: String(roundf(excitedValue.value)),
+                                           sad: String(roundf(sadValue.value)),
+                                           sleep: sleepStr,
+                                           reasons: reasonsStr,
+                                           date: dateStr)
         
         let moodCount = PersistenceService.shared.getMoodCount()
         var s = ""
@@ -125,4 +131,8 @@ extension ViewController: UITextFieldDelegate {
         // This causes the keyboard to be dismissed.
         self.view.endEditing(true)
     }
+}
+
+extension ViewController {
+
 }
