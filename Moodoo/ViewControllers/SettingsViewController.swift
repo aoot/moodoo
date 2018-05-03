@@ -27,6 +27,8 @@ class SettingsViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        var mood: UserMood?
+        emailLabel.text = PersistenceService.shared.getUsername()
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.navigationItem.title = "Settings"

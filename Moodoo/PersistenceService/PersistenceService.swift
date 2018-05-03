@@ -145,6 +145,10 @@ extension PersistenceService {
         return AppUser(username:"<bad>", password:"<bad>", email:"<bad>", moodCount: 0)
     }
     
+    func getUsername() -> String {
+        return (currentUser?.username)!
+    }
+    
 }
 
 

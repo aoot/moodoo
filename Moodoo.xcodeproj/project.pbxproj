@@ -22,7 +22,6 @@
 		E54EE494208BFE7000EC23F8 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE493208BFE7000EC23F8 /* TabBarController.swift */; };
 		E54EE496208BFE7800EC23F8 /* ShowMoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE495208BFE7800EC23F8 /* ShowMoodView.swift */; };
 		E54EE49A208C00B100EC23F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54EE499208C00B100EC23F8 /* ViewController.swift */; };
-		E550AD89208EA8EF000B53CA /* CalendarTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E550AD88208EA8EF000B53CA /* CalendarTableView.swift */; };
 		E5820792208D373700C53982 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E570F320208C06EC0029098C /* ForgotPasswordViewController.swift */; };
 		E5820793208D373800C53982 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E570F323208C06EC0029098C /* SettingsViewController.swift */; };
 		E5820794208D373900C53982 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E570F322208C06EC0029098C /* SignUpViewController.swift */; };
@@ -53,7 +52,6 @@
 		E54EE493208BFE7000EC23F8 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E54EE495208BFE7800EC23F8 /* ShowMoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoodView.swift; sourceTree = "<group>"; };
 		E54EE499208C00B100EC23F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E550AD88208EA8EF000B53CA /* CalendarTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTableView.swift; sourceTree = "<group>"; };
 		E570F31D208C06880029098C /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		E570F320208C06EC0029098C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		E570F321208C06EC0029098C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -129,8 +127,8 @@
 				E570F319208C06190029098C /* PersistenceService */,
 				E54EE47C208BFE1B00EC23F8 /* AppDelegate.swift */,
 				E54EE483208BFE1B00EC23F8 /* Moodoo.xcdatamodeld */,
-				92DA54D2208E562A00575273 /* Storyboards_Anthony */,
 				E570F31C208C06400029098C /* Storyboards_Michael */,
+				92DA54D2208E562A00575273 /* Storyboards_Anthony */,
 				E570F31B208C06370029098C /* Storyboards_Natascha */,
 				E570F31A208C06290029098C /* ViewControllers */,
 				E570F318208C060A0029098C /* ClassDefinitions */,
@@ -176,7 +174,6 @@
 				E54EE493208BFE7000EC23F8 /* TabBarController.swift */,
 				E54EE499208C00B100EC23F8 /* ViewController.swift */,
 				E54EE480208BFE1B00EC23F8 /* Mood.storyboard */,
-				E550AD88208EA8EF000B53CA /* CalendarTableView.swift */,
 			);
 			path = Storyboards_Natascha;
 			sourceTree = "<group>";
@@ -334,7 +331,6 @@
 			files = (
 				92DA54DB208E5EE900575273 /* CustomCell.swift in Sources */,
 				E59E814C208C093200831E42 /* LoginViewController.swift in Sources */,
-				E550AD89208EA8EF000B53CA /* CalendarTableView.swift in Sources */,
 				E59E814E208C097300831E42 /* AppUser.swift in Sources */,
 				E5820793208D373800C53982 /* SettingsViewController.swift in Sources */,
 				E59E814D208C096800831E42 /* PersistenceService.swift in Sources */,

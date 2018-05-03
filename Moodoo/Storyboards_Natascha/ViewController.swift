@@ -16,8 +16,6 @@ class ViewController: UIViewController {
     
     @IBAction func excitedSlider(_ sender: UISlider) {
         sender.value = roundf(sender.value)
-   
-        
     }
     
     @IBOutlet weak var happyValue: UISlider!
@@ -38,11 +36,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var sleep: UITextField!
     
     @IBAction func saveButton(_ sender: Any) {
-
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .none
         let dateStr = dateFormatter.string(from: NSDate() as Date)
+        let date = NSDate()
+        
+        if PersistenceService.shared.checkMoodForDay(date: date as Date) {
+            let alert = UIAlertController(title: "Duplicate",
+                                          message: "You have already logged your mood today!",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in}
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+            
+        }
+        
         
         PersistenceService.shared.saveMood(angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleep: sleep.text!, reasons: reasons.text!, date: dateStr)
         
@@ -51,13 +60,15 @@ class ViewController: UIViewController {
         if moodCount > 1 {
             s = "s"
         }
+        else{
         
-        let alert = UIAlertController(title: "Congratulations!",
-                                          message: "You've logged your mood \(moodCount) time\(s)!",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in}
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Congratulations!",
+                                              message: "You've logged your mood \(moodCount) time\(s)!",
+                preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in}
+            alert.addAction(okAction)
+            present(alert, animated: true, completion: nil)
+        }
         
     }
     
