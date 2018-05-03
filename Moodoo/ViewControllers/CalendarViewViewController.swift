@@ -22,10 +22,15 @@ class CalendarViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCalendarView()
-        calendarView.scrollToDate(Date.init())
+        calendarView.scrollToDate(Date.init(), animateScroll: false)
         calendarView.visibleDates {visibleDates in
             self.SetUpViewsOfCalendar(from: visibleDates)
         }
+        self.navigationItem.title = "Mood History"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        calendarView.reloadData()
     }
     
     func handleCellSelected(view: JTAppleCell?, cellState: CellState){
@@ -54,12 +59,20 @@ class CalendarViewViewController: UIViewController {
         // color days in the month white, outside of month gray
         if cellState.dateBelongsTo == .thisMonth{
             validCell.dateLabel.textColor! = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            if PersistenceService.shared.checkMoodForDay(date: validCell.date!) {
+                validCell.backgroundColor = UIColor.orange
+            }
+            else {
+                validCell.backgroundColor = #colorLiteral(red: 1, green: 0.7906726003, blue: 0.4334131479, alpha: 1)
+            }
         }
         else{
             validCell.dateLabel.textColor! = #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)
         }
     }
+    
     func setupCalendarView(){
+        self.year.text = ""
         calendarView.minimumLineSpacing = 0
         calendarView.minimumInteritemSpacing = 0
     }
@@ -72,9 +85,9 @@ class CalendarViewViewController: UIViewController {
     func SetUpViewsOfCalendar(from visibleDates: DateSegmentInfo){
         let date = visibleDates.monthDates.first!.date
         self.formatter.dateFormat = "yyyy"
-        self.year.text = self.formatter.string(from:date)
+        let yearStr = self.formatter.string(from:date)
         self.formatter.dateFormat = "MMMM"
-        self.month.text = self.formatter.string(from:date)
+        self.month.text = "\(self.formatter.string(from:date)) \(yearStr)"
     }
 
     // MARK: - Navigation
@@ -102,7 +115,7 @@ extension CalendarViewViewController:  JTAppleCalendarViewDataSource {
     }
     
    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-       // makes other extension work somehow
+       // nothing to do here
     }
     
 }
@@ -133,10 +146,10 @@ extension CalendarViewViewController: JTAppleCalendarViewDelegate {
     
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
-        formatter.dateFormat = "yyyy"
-        year.text = formatter.string(from:date)
-        formatter.dateFormat = "MMMM"
-        month.text = formatter.string(from:date)
+        self.formatter.dateFormat = "yyyy"
+        let yearStr = self.formatter.string(from:date)
+        self.formatter.dateFormat = "MMMM"
+        self.month.text = "\(self.formatter.string(from:date)) \(yearStr)"
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {

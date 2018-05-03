@@ -86,7 +86,7 @@ class TabBarController: UITabBarController {
 extension TabBarController: UITabBarControllerDelegate {
     // Indicates which tab bar item was tapped.
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        print("====>>>   didSelectItem. item.tag = \(item.tag)")
+        //print("====>>>   didSelectItem. item.tag = \(item.tag)")
     }
 
 }

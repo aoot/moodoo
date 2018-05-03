@@ -17,6 +17,7 @@ class ShowMoodView: UIViewController {
     @IBOutlet weak var excitedLabel: UILabel!
     @IBOutlet weak var angryLabel: UILabel!
     @IBOutlet weak var sleepLabel: UILabel!
+    @IBOutlet weak var reasonsMessageLabel: UILabel!
     @IBOutlet weak var reasonsLabel: UILabel!
     
     var mood: UserMood?
@@ -24,7 +25,6 @@ class ShowMoodView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let date = DateFormatter.localizedString(from: mood!.date, dateStyle: .long, timeStyle: .none)
         self.dateLabel.text = "On \(mood!.date), you were:"
         
          // sad/joyful
@@ -70,7 +70,6 @@ class ShowMoodView: UIViewController {
          }
          
          // tired/energetic
-         
          if mood!.excited == "1.0"{
             self.excitedLabel.text = "very tired"
          }
@@ -84,14 +83,25 @@ class ShowMoodView: UIViewController {
             self.excitedLabel.text = "very energetic"
          }
         
-        var s:String = ""
-        if Int(mood!.sleep)! > 1 {
-            s = "s"
+        if mood!.sleep == "HIDE" {
+            self.sleepLabel.text = ""
+        }
+        else {
+            var s:String = ""
+            if Int(mood!.sleep)! > 1 {
+                s = "s"
+            }
+            
+            self.sleepLabel.text = "You were on \(mood!.sleep) hour\(s) of sleep"
         }
         
-        self.sleepLabel.text = "You were on \(mood!.sleep) hour\(s) of sleep"
-        
-        self.reasonsLabel.text = mood!.reasons
+        if mood!.reasons == "HIDE" {
+            self.reasonsMessageLabel.text = ""
+            self.reasonsLabel.text = ""
+        }
+        else {
+            self.reasonsLabel.text = mood!.reasons
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,14 +11,12 @@ import Firebase
 import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController {
-    var txtUsername: UITextField!
+
     @IBOutlet weak var txtEmail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         txtEmail.delegate = self
-        // OVERRIDE: - Force username to be the same as email
-        self.txtUsername = self.txtEmail
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +26,16 @@ class ForgotPasswordViewController: UIViewController {
     
     @IBAction func btnSendEmail(_ sender: Any) {
         Auth.auth().sendPasswordReset(withEmail: txtEmail.text!) { (error) in
-            if error != nil {print(error!)} else {print("No errors, email should be sent.")}
+            if error != nil {
+                print(error!)
+            }
+            else {
+                let alertController = UIAlertController(title: "Email Sent", message: "Please check your inbox", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                //print("No errors, email should be sent.")
+            }
         }
     }
     

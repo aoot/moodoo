@@ -10,16 +10,15 @@ import Foundation
 import CoreData
 import FirebaseAuth
 
+// Used to store user data locally on the target device
 class PersistenceService {
-    // Custom declared PersistenceService class -
-    // It is used to store user information locally on the device.
     
     private init() {
         // Hard coded account for testing
         /*saveUser(username: "anthonyylee@utexas.edu",
-                 password: "anthony",
-                 email: "anthonyylee@utexas.edu",
-                 moodCount: 0)*/
+         password: "anthony",
+         email: "anthonyylee@utexas.edu",
+         moodCount: 0)*/
     }
     
     static let shared = PersistenceService()  // Singleton instance, class level varaible
@@ -37,7 +36,7 @@ class PersistenceService {
         fetchMoods()
         setMoodCount()
         saveContext()
-        getMoodCount()
+        setMoodCount()
     }
     
     // MARK: - Core Data stack
@@ -46,26 +45,10 @@ class PersistenceService {
     }
     
     private lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-         */
+        
         let container = NSPersistentContainer(name: "Moodoo")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
@@ -79,14 +62,12 @@ class PersistenceService {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
-
+    
 }
 
 
@@ -161,7 +142,7 @@ extension PersistenceService {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Mood")
         fetchRequest.predicate = NSPredicate(format: "user == %@", currentUser!.username)
         var fetchedResults:[NSManagedObject]? = nil
-     
+        
         do {
             try fetchedResults = managedContext.fetch(fetchRequest) as? [NSManagedObject]
         } catch {
@@ -186,7 +167,7 @@ extension PersistenceService {
         mood.setValue(sleep, forKey: "sleep")
         mood.setValue(reasons, forKey: "reasons")
         mood.setValue(date, forKey: "date")
-        mood.setValue(currentUser!.username, forKey:"user")  // Keep finding nil
+        mood.setValue(currentUser!.username, forKey:"user")
         
         do {
             try managedContext.save()

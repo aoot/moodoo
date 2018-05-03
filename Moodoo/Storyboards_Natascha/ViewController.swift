@@ -49,11 +49,26 @@ class ViewController: UIViewController {
             let okAction = UIAlertAction(title: "OK", style: .`default`){(action: UIAlertAction!) -> Void in}
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
-            
+            return
         }
         
+        var sleepStr = ""
+        if sleep.text! == "" {
+            sleepStr = "HIDE"
+        }
+        else {
+            sleepStr = sleep.text!
+        }
         
-        PersistenceService.shared.saveMood(angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleep: sleep.text!, reasons: reasons.text!, date: dateStr)
+        var reasonsStr = ""
+        if reasons.text! == "" || reasons.text! == "Reasons for mood" {
+            reasonsStr = "HIDE"
+        }
+        else {
+            reasonsStr = reasons.text!
+        }
+        
+        PersistenceService.shared.saveMood(angry: String(roundf(angryValue.value)), happy: String(roundf(happyValue.value)), excited: String(roundf(excitedValue.value)), sad: String(roundf(sadValue.value)), sleep: sleepStr, reasons: reasonsStr, date: dateStr)
         
         let moodCount = PersistenceService.shared.getMoodCount()
         var s = ""

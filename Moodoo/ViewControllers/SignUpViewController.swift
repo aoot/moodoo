@@ -23,7 +23,6 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
-    var txtNewUsername: UITextField!
     @IBOutlet weak var txtNewPassword: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var txtNewEmail: UITextField!
@@ -40,9 +39,6 @@ class SignUpViewController: UIViewController {
         txtNewEmail.delegate = self
         txtNewPassword.delegate = self
         txtConfirmPassword.delegate = self
-
-        // OVERRIDE: - Force username to be the same as email
-        self.txtNewUsername = self.txtNewEmail
         
         self.navigationItem.title = "New Account"
     }
@@ -59,7 +55,7 @@ class SignUpViewController: UIViewController {
     
     @IBAction func btnCreateAccount(_ sender: Any) {
         // TODO: - Refactor this crazy nested if/else
-        if (txtNewUsername.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "" || txtNewEmail.text == "") {
+        if (txtNewEmail.text == "" || txtNewPassword.text == "" || txtConfirmPassword.text == "") {
             self.alertController = UIAlertController(title: "Validation Error", message: "All fields are required", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
             self.alertController!.addAction(OKAction)
@@ -74,7 +70,7 @@ class SignUpViewController: UIViewController {
             }
             else {
                 // TODO: - Needs more work to verify user validity with Firebase, should still build atm
-                let user = PersistenceService.shared.getUser(name: txtNewUsername.text!)
+                let user = PersistenceService.shared.getUser(name: txtNewEmail.text!)
 
                 if user.username != "<bad>" {
                     self.alertController = UIAlertController(title: "Validation Error", message: "Username taken - please try another one", preferredStyle: UIAlertControllerStyle.alert)
@@ -88,7 +84,7 @@ class SignUpViewController: UIViewController {
                             // Send email verification
                             Auth.auth().currentUser?.sendEmailVerification {(error) in}
                             
-                            PersistenceService.shared.saveUser(username: self.txtNewUsername.text!, password: self.txtNewPassword.text!, email: self.txtNewEmail.text!, moodCount: 0)
+                            PersistenceService.shared.saveUser(username: self.txtNewEmail.text!, password: self.txtNewPassword.text!, email: self.txtNewEmail.text!, moodCount: 0)
                             
                             print("\(user!.email!) created")
                         } else {

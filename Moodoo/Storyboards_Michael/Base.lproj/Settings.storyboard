@@ -58,8 +58,8 @@
                                     <segue destination="xxA-aW-rqE" kind="modal" id="4ve-kb-MEh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Info:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-LE-zgc">
-                                <rect key="frame" x="16" y="89" width="102" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Login:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-LE-zgc">
+                                <rect key="frame" x="16" y="89" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="xxA-aW-rqE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwT-yZ-8G4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="577" y="255"/>
+            <point key="canvasLocation" x="640" y="14"/>
         </scene>
     </scenes>
 </document>

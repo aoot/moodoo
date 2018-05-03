@@ -37,6 +37,10 @@ class SettingsViewController: UIViewController {
         emailLabel.text = PersistenceService.shared.getUsername()
         moodsLoggedLabel.text = String(PersistenceService.shared.getMoodCount())
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        moodsLoggedLabel.text = String(PersistenceService.shared.getMoodCount())
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
