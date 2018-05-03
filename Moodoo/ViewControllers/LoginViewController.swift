@@ -49,7 +49,14 @@ class LoginViewController: UIViewController {
                 if error == nil {
                     //Print into the console if successfully logged in
                     print("You have successfully logged in")
-                    PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
+                    
+                    if PersistenceService.shared.getUser(name: self.txtEmail.text!).username == "<bad>" {
+                        PersistenceService.shared.saveUser(username: self.txtEmail.text!, password: self.txtPassword.text!, email: self.txtEmail.text!, moodCount: 0)
+                    }
+                    else {
+                        PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
+                    }
+                    
                     //Go to the HomeViewController if the login is sucessful
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "moodCapture")
                     self.present(vc!, animated: true, completion: nil)
