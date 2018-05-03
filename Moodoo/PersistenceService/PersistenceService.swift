@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import FirebaseAuth
 
 class PersistenceService {
     // Custom declared PersistenceService class -
