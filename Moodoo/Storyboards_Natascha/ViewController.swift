@@ -95,6 +95,8 @@ class ViewController: UIViewController {
         formatter.timeStyle = .none
         let str = formatter.string(from: Date())
         self.navigationItem.title = str
+        reasons.delegate = self
+        sleep.delegate = self
         angryValue.value = 0
         happyValue.value = 0
         sadValue.value = 0
