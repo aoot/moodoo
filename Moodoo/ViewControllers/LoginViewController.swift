@@ -41,18 +41,18 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLogin(_ sender: Any) {
         /*
-        Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in
-            if user != nil {
-                // TODO: - remove after firebase
-                PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
-                // TODO: - remove segue from button into if else statement
-//                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-                print("\(user!.email!) signed in")
-            } else {
-                print(error!)
-            }
-        }
-        */
+         Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { (user, error) in
+         if user != nil {
+         // TODO: - remove after firebase
+         PersistenceService.shared.setCurrentUser(username: self.txtEmail.text!)
+         // TODO: - remove segue from button into if else statement
+         //                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+         print("\(user!.email!) signed in")
+         } else {
+         print(error!)
+         }
+         }
+         */
         
         if self.txtEmail.text == "" || self.txtPassword.text == "" {
             
@@ -94,36 +94,36 @@ class LoginViewController: UIViewController {
     }
 }
 
-  /* 
+/*
+ 
+ if user.username == "<bad>" {
+ self.alertController = UIAlertController(title: "Invalid Login", message: "Username not recognized", preferredStyle: UIAlertControllerStyle.alert)
+ let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+ self.alertController!.addAction(OKAction)
+ self.present(self.alertController!, animated:true, completion:nil)
+ }
+ else {
+ if user.password != txtPassword.text {
+ self.alertController = UIAlertController(title: "Invalid Login", message: "Password does not match our records", preferredStyle: UIAlertControllerStyle.alert)
+ let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
+ self.alertController!.addAction(OKAction)
+ self.present(self.alertController!, animated:true, completion:nil)
+ }
+ else {
+ // THEN YOU CAN FINALLY LOG IN
+ PersistenceService.shared.setCurrentUser(username: txtEmail.text!)
+ }
+ }
+ */
 
-            if user.username == "<bad>" {
-                self.alertController = UIAlertController(title: "Invalid Login", message: "Username not recognized", preferredStyle: UIAlertControllerStyle.alert)
-                let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-                self.alertController!.addAction(OKAction)
-                self.present(self.alertController!, animated:true, completion:nil)
-            }
-            else {
-                if user.password != txtPassword.text {
-                    self.alertController = UIAlertController(title: "Invalid Login", message: "Password does not match our records", preferredStyle: UIAlertControllerStyle.alert)
-                    let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in }
-                    self.alertController!.addAction(OKAction)
-                    self.present(self.alertController!, animated:true, completion:nil)
-                }
-                else {
-                    // THEN YOU CAN FINALLY LOG IN
-                    PersistenceService.shared.setCurrentUser(username: txtEmail.text!)
-                }
-            }
-    */
-        
-    
-    
-    /*
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-    }
-    */
+
+/*
+ // MARK: - Navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ 
+ }
+ */
 
 
 extension LoginViewController: UITextFieldDelegate {
@@ -155,3 +155,4 @@ extension LoginViewController {
         self.view.sendSubview(toBack: imageView)
     }
 }
+
